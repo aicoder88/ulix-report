@@ -142,10 +142,10 @@ export function SourceAtlasDialog({
                 )}
                 <button
                   type="button"
-                  onClick={() => onJumpToSection("atlas")}
+                  onClick={() => onJumpToSection("proof")}
                   className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
                 >
-                  View full atlas
+                  View full proof atlas
                 </button>
               </div>
             </div>

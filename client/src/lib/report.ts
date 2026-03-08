@@ -15,55 +15,23 @@ export type SearchEntry =
     }
   | {
       id: string;
-      type: "chapter";
-      title: string;
-      description: string;
-      keywords: string[];
-      sectionId: "explorer";
-      chapterId: string;
-      meta: string;
-    }
-  | {
-      id: string;
       type: "source";
       title: string;
       description: string;
       keywords: string[];
-      sectionId: "atlas";
+      sectionId: "proof";
       page: number;
-      meta: string;
-    }
-  | {
-      id: string;
-      type: "view";
-      title: string;
-      description: string;
-      keywords: string[];
-      sectionId: "views";
-      viewId: string;
       meta: string;
     };
 
 const sectionDescriptions: Record<string, string> = {
-  overview: siteContent.hero.description,
-  summary: siteContent.executiveSummary.thesis,
-  views: siteContent.stakeholderViews.description,
-  guide: siteContent.reportGuide.description,
-  explorer: siteContent.chapterExplorer.description,
-  vision: siteContent.vision.description,
-  business: siteContent.businessReview.subtitle,
-  "business-model": siteContent.businessModel.subtitle,
-  products: siteContent.productStrategy.subtitle,
-  systems: siteContent.systemsOverview.subtitle,
-  hub: siteContent.travelHub.content,
-  amadeus: siteContent.amadeus.description,
-  roadmap: siteContent.recommendationRoadmap.description,
-  strategy:
-    "Short-term initiatives, long-term platform direction, and scaling priorities.",
-  atlas:
-    "Rendered slide collection for the most evidence-dense source pages in the original workshop PDF.",
-  challenges:
-    "Current operational issues and strategic opportunities identified in the workshop.",
+  preface: siteContent.preface.description,
+  urgency: siteContent.transformationNarrative.urgency.lead,
+  commitments: siteContent.operatingCommitments.intro,
+  platform: siteContent.transformationNarrative.platform.lead,
+  friction: siteContent.transformationNarrative.friction.lead,
+  roadmap: siteContent.transformationNarrative.roadmap.lead,
+  proof: siteContent.proofLayer.description,
 };
 
 export function buildSearchEntries(): SearchEntry[] {
@@ -77,22 +45,6 @@ export function buildSearchEntries(): SearchEntry[] {
     meta: "Section",
   }));
 
-  const chapterEntries: SearchEntry[] =
-    siteContent.chapterExplorer.chapters.map(chapter => ({
-      id: `chapter-${chapter.id}`,
-      type: "chapter",
-      title: chapter.label,
-      description: chapter.summary,
-      keywords: [
-        chapter.range,
-        ...chapter.takeaways,
-        ...chapter.sourcePages.map(item => `page ${item.page}`),
-      ],
-      sectionId: "explorer",
-      chapterId: chapter.id,
-      meta: `Chapter · ${chapter.range}`,
-    }));
-
   const sourceEntries: SearchEntry[] = siteContent.sourceAtlas.map(item => ({
     id: `source-${item.page}`,
     type: "source",
@@ -103,36 +55,15 @@ export function buildSearchEntries(): SearchEntry[] {
       item.whyItMatters,
       ...item.bullets,
       `page ${item.page}`,
+      "proof",
+      "source",
     ],
-    sectionId: "atlas",
+    sectionId: "proof",
     page: item.page,
-    meta: `Source page ${item.page}`,
+    meta: `Proof page ${item.page}`,
   }));
 
-  const viewEntries: SearchEntry[] = siteContent.stakeholderViews.views.map(
-    view => ({
-      id: `view-${view.id}`,
-      type: "view",
-      title: `${view.label} view`,
-      description: view.summary,
-      keywords: [
-        view.audience,
-        ...view.prompts,
-        ...view.sections,
-        ...view.sourcePages.map(page => `page ${page}`),
-      ],
-      sectionId: "views",
-      viewId: view.id,
-      meta: `Stakeholder · ${view.audience}`,
-    })
-  );
-
-  return [
-    ...sectionEntries,
-    ...viewEntries,
-    ...chapterEntries,
-    ...sourceEntries,
-  ];
+  return [...sectionEntries, ...sourceEntries];
 }
 
 export function getPdfPageHref(page?: number) {
@@ -151,7 +82,7 @@ export function parseReportHash(hash: string) {
   if (hash.startsWith(ATLAS_HASH_PREFIX)) {
     const page = Number.parseInt(hash.slice(ATLAS_HASH_PREFIX.length), 10);
     return {
-      sectionId: "atlas",
+      sectionId: "proof",
       atlasPage: Number.isFinite(page) ? page : null,
     };
   }

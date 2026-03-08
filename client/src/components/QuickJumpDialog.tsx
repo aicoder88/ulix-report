@@ -18,9 +18,7 @@ type QuickJumpDialogProps = {
 
 const groupLabels: Record<SearchEntry["type"], string> = {
   section: "Sections",
-  view: "Stakeholder views",
-  chapter: "Chapter explorer",
-  source: "Source atlas",
+  source: "Proof pages",
 };
 
 export function QuickJumpDialog({
@@ -31,8 +29,6 @@ export function QuickJumpDialog({
 }: QuickJumpDialogProps) {
   const groups = {
     section: entries.filter(entry => entry.type === "section"),
-    view: entries.filter(entry => entry.type === "view"),
-    chapter: entries.filter(entry => entry.type === "chapter"),
     source: entries.filter(entry => entry.type === "source"),
   };
 
@@ -41,7 +37,7 @@ export function QuickJumpDialog({
       open={open}
       onOpenChange={onOpenChange}
       title="Quick jump"
-      description="Search sections, chapter entries, stakeholder views, and source pages."
+      description="Search sections and proof pages."
       className="max-w-2xl"
     >
       <CommandInput placeholder="Search the report, a page, or a stakeholder path..." />

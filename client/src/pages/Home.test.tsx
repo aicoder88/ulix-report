@@ -10,16 +10,16 @@ vi.mock("@/lib/analytics", () => ({
 
 describe("Home hash navigation", () => {
   it("activates the matching section from the URL hash", async () => {
-    window.location.hash = "#summary";
+    window.location.hash = "#roadmap";
 
     render(<Home />);
 
     await waitFor(() => {
-      const activeSummaryButton = screen
-        .getAllByRole("button", { name: "Summary" })
+      const activeRoadmapButton = screen
+        .getAllByRole("button", { name: "Roadmap" })
         .find(button => button.getAttribute("aria-current") === "location");
 
-      expect(activeSummaryButton).toBeTruthy();
+      expect(activeRoadmapButton).toBeTruthy();
     });
   });
 

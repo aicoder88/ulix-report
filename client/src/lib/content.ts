@@ -10,10 +10,351 @@
 export const siteContent = {
   meta: {
     title: "ULIX Discovery Workshop Report",
-    subtitle: "A Strategic View of ULIX's Platform Ambition",
+    subtitle: "A Public Proof Edition for ULIX's AI Transformation",
     date: "October 2018",
     preparedBy: "Amadeus Customer Solutions, Consolidators & Networks",
-    status: "Strictly Confidential & Restricted",
+    status: "Public proof edition",
+  },
+
+  preface: {
+    title: "A growing travel company is becoming a better system.",
+    subtitle:
+      "ULIX and TMC already built the hard part: a working operating core. The next step is to use AI, process discipline, and better product choices to make that core scale.",
+    description:
+      "This report is not a nostalgia piece. It is a bridge between the 2018 workshop and the company ULIX is becoming now. The workshop proved there was a platform inside the business. Today the job is to remove friction, capture know-how, and turn strong people into a stronger system.",
+    badge: "Preface · AI Transformation Edition",
+    opening:
+      "ULIX does not need more hype. It needs cleaner execution. That means better quality, less duplicated effort, faster learning, and AI applied where it removes waste and sharpens service.",
+    highlights: [
+      "Built on a real TMC, not a slide-deck promise",
+      "Written for both operators and partners",
+      "Designed to move fast, verify fast, and keep scrolling",
+    ],
+    pullQuote:
+      "Build a company where quality scales because the system gets better, not because heroes work harder.",
+    ctaLabel: "See what matters now",
+  },
+
+  transformationNarrative: {
+    urgency: {
+      title: "Why This Matters Now",
+      subtitle:
+        "The old workshop diagnosed platform potential. The current moment is about converting that potential into repeatable, AI-assisted execution.",
+      lead:
+        "ULIX sits in a strong position. It has reach, brands, a working TMC, and a habit of building from real operating pain. That creates leverage. It also creates risk if growth still depends on manual fixes, tribal knowledge, and uneven service quality.",
+      cards: [
+        {
+          title: "What matters",
+          description:
+            "ULIX already owns the assets most companies only talk about: a working operating platform, a living lab, and a regional network story.",
+        },
+        {
+          title: "What to stop",
+          description:
+            "Stop treating manual heroics, fragmented search quality, and one-off fixes as if they can carry the next stage of growth.",
+        },
+        {
+          title: "What happens next",
+          description:
+            "Use AI to capture knowledge, improve decisions, route work faster, and make service quality more consistent across brands and partners.",
+        },
+      ],
+      facts: [
+        "The workshop already identified platform potential, automation gaps, and the need for clearer sequencing.",
+        "The business now has a stronger reason to act: AI can reduce manual load while increasing speed, quality, and learning.",
+        "The company can serve two audiences at once: internal teams who need operating clarity and external partners who need proof.",
+      ],
+    },
+    business: {
+      title: "The Business That Was Already Hiding In The Business",
+      subtitle:
+        "ULIX grew from a founder-led agency into a regional operating model with product, partner, and community advantages.",
+      lead:
+        "The company story matters because it explains the operating style. ULIX learned by doing, built trust through service, expanded through local brands, and turned recurring pain into software. That is the right raw material for AI transformation, because it starts from work that already exists.",
+      pillars: [
+        {
+          title: "Founder energy",
+          description:
+            "A bias toward action created the speed, experimentation, and resilience that shaped the company early.",
+        },
+        {
+          title: "Regional footprint",
+          description:
+            "Multiple markets and brands prove distribution strength and create more surface area for repeatable systems.",
+        },
+        {
+          title: "Product from pain",
+          description:
+            "The TMC emerged because the market tools were weak. That makes the platform relevant, not theoretical.",
+        },
+        {
+          title: "Community as advantage",
+          description:
+            "The travel hub, webinars, and partner support create trust and make ULIX more than a transactional seller.",
+        },
+      ],
+      aiImplication:
+        "AI should amplify this model, not replace it. The goal is to preserve entrepreneurial speed while making quality, training, and decision-making easier to repeat.",
+      nextAction:
+        "Treat the company story as a systems story: capture what works, standardize it where it should repeat, and use AI where it removes waste.",
+    },
+    platform: {
+      title: "Platform Today",
+      subtitle:
+        "The strongest argument for ULIX is simple: the operating platform already exists.",
+      lead:
+        "ULIX has a real TMC core, front-end brands, partner-facing services, and a community layer that attracts agencies and collaborators. The question is no longer whether there is a platform. The question is how fast it can become easier to use, easier to support, and easier to scale.",
+      assets: [
+        {
+          title: "TMC core",
+          description:
+            "Queue work, invoicing, profiles, ticketing, and quality control already live inside a real internal operating system.",
+          proof: "Proof pages 11 and 21",
+        },
+        {
+          title: "Multi-brand distribution",
+          description:
+            "Localized consumer brands across several countries give ULIX distribution reach and product feedback loops.",
+          proof: "Proof page 21",
+        },
+        {
+          title: "Partner enablement",
+          description:
+            "Sub-agencies, travel agencies, and home-based agents already depend on ULIX infrastructure and support.",
+          proof: "Proof pages 24 and 154",
+        },
+        {
+          title: "Travel hub",
+          description:
+            "The hub extends the model beyond selling travel into convening talent, partners, and innovation activity.",
+          proof: "Proof page 13",
+        },
+      ],
+      aiApplications: [
+        "Search ranking and result explanation",
+        "Queue triage and workflow routing",
+        "Agent copilots for policy, fare, and process guidance",
+        "Knowledge capture from recurring service work",
+        "Reporting and anomaly detection for managers",
+        "Partner enablement, onboarding, and self-service support",
+      ],
+      sectionProofPages: [11, 13, 21],
+    },
+    friction: {
+      title: "Friction, Waste, And The Next Big Gains",
+      subtitle:
+        "The limiting factor is not ambition. It is the amount of quality, knowledge, and throughput still trapped in manual work.",
+      lead:
+        "The report is clear about the friction: too many important tasks still depend on people remembering the right thing at the right moment. That slows response time, makes quality harder to manage, and limits how far the platform can stretch.",
+      issues: [
+        {
+          title: "Manual queue work",
+          description:
+            "Too much servicing still flows through repetitive human steps that should be assisted or automated.",
+          impact: "Slower throughput and lower margin leverage",
+        },
+        {
+          title: "Knowledge trapped in people",
+          description:
+            "Critical know-how lives in experienced operators instead of searchable workflows and reusable guidance.",
+          impact: "Training, consistency, and scale all get harder",
+        },
+        {
+          title: "Uneven search and merchandising",
+          description:
+            "Search quality, ancillaries, and offer presentation still leave revenue and trust on the table.",
+          impact: "Conversion and customer confidence suffer",
+        },
+        {
+          title: "Corporate readiness gap",
+          description:
+            "The corporate tool, reporting discipline, and integration posture need to mature to unlock the next tier of growth.",
+          impact: "A large addressable market stays under-served",
+        },
+      ],
+      opportunities: [
+        "Launch the corporate booking motion with AI-assisted reporting and policy workflows",
+        "Use AI to reduce repeat service effort before expanding headcount",
+        "Turn training and quality control into system features, not only managerial tasks",
+        "Make better decisions faster with stronger reporting, alerts, and operational visibility",
+      ],
+      nextAction:
+        "Attack the repeatable pain first. That is where AI earns trust quickly and where Drucker-style efficiency shows up in the numbers.",
+    },
+    roadmap: {
+      title: "AI Transformation Roadmap",
+      subtitle:
+        "Sequence the work so every phase improves quality, frees capacity, and prepares the next layer of scale.",
+      lead:
+        "The right roadmap is not 'AI everywhere.' It is disciplined sequencing. Start where the business already feels pain. Then use the wins to fund deeper automation, better decisions, and broader partner scale.",
+      phases: [
+        {
+          name: "Phase 1",
+          label: "Operational assist",
+          horizon: "0-3 months",
+          summary:
+            "Deploy AI where teams need speed, guidance, and better consistency right now.",
+          items: [
+            "Assist agents with search explanation, policy guidance, and next-best-action prompts",
+            "Summarize queue context and reduce lookup time inside the TMC",
+            "Improve reporting visibility for leaders without waiting for a platform rebuild",
+          ],
+        },
+        {
+          name: "Phase 2",
+          label: "Workflow automation",
+          horizon: "3-9 months",
+          summary:
+            "Move repeat tasks out of human memory and into reliable system flows.",
+          items: [
+            "Automate queue routing, alerts, and standard servicing triggers",
+            "Capture recurring knowledge into reusable playbooks and internal copilots",
+            "Connect corporate booking, approvals, and reporting into a cleaner operating loop",
+          ],
+        },
+        {
+          name: "Phase 3",
+          label: "Decision support",
+          horizon: "9-15 months",
+          summary:
+            "Use AI to help leadership see demand, risk, quality, and opportunity earlier.",
+          items: [
+            "Detect anomalies in servicing, conversion, ancillaries, and partner operations",
+            "Improve forecast quality and margin visibility across brands and markets",
+            "Guide prioritization with better operational and commercial intelligence",
+          ],
+        },
+        {
+          name: "Phase 4",
+          label: "Partner platform scale",
+          horizon: "15+ months",
+          summary:
+            "Package the operating model so partners can use more of it with less custom effort.",
+          items: [
+            "Turn internal strengths into partner-facing tools, guidance, and network services",
+            "Scale the TMC and hub model across the region with clearer onboarding",
+            "Use proof, not slogans, to position ULIX as the operating platform for independent agencies",
+          ],
+        },
+      ],
+      partnerContext:
+        "The original Amadeus material still matters here. Its value is not the brand name. Its value is the platform lens: open systems, connected content, and better tooling around real operators.",
+      sectionProofPages: [45, 55, 56, 81, 104, 154],
+    },
+  },
+
+  operatingCommitments: {
+    title: "Fourteen Operating Commitments",
+    subtitle:
+      "Deming translated into plain language for a growing travel platform using AI.",
+    intro:
+      "These commitments turn the transformation into operating behavior. They are practical on purpose. Each one should change how ULIX builds, trains, manages, and improves.",
+    items: [
+      {
+        number: "01",
+        title: "Stay fixed on long-term improvement",
+        description:
+          "Invest in better systems, better service, and better learning instead of chasing short-lived wins.",
+      },
+      {
+        number: "02",
+        title: "Treat quality as the way we work",
+        description:
+          "Do not bolt quality on at the end. Build it into the daily flow of product, service, and support.",
+      },
+      {
+        number: "03",
+        title: "Prove quality inside the process",
+        description:
+          "Rely less on cleanup and rework. Design the system so errors are harder to create in the first place.",
+      },
+      {
+        number: "04",
+        title: "Choose tools and partners for capability, not just price",
+        description:
+          "Cheap that slows the system is expensive. Pick what improves reliability, speed, and learning.",
+      },
+      {
+        number: "05",
+        title: "Improve every workflow all the time",
+        description:
+          "Search, ticketing, reporting, training, and partner support should all be under continuous improvement.",
+      },
+      {
+        number: "06",
+        title: "Make training a real operating system",
+        description:
+          "Turn expert knowledge into repeatable guidance, searchable playbooks, and AI-assisted learning.",
+      },
+      {
+        number: "07",
+        title: "Lead by removing obstacles",
+        description:
+          "Managers should help teams do better work, not just ask for more output.",
+      },
+      {
+        number: "08",
+        title: "Drive out fear",
+        description:
+          "People should be able to surface problems, errors, and weak processes early without hiding them.",
+      },
+      {
+        number: "09",
+        title: "Break down silo walls",
+        description:
+          "Product, operations, commercial teams, and partners need shared goals, shared facts, and faster feedback loops.",
+      },
+      {
+        number: "10",
+        title: "Stop using slogans to cover system problems",
+        description:
+          "If quality or speed is weak, fix the workflow. Do not ask people to simply try harder.",
+      },
+      {
+        number: "11",
+        title: "Do not manage by quota alone",
+        description:
+          "Measure outcomes, but also improve the system that produces them.",
+      },
+      {
+        number: "12",
+        title: "Protect pride in workmanship",
+        description:
+          "Give teams the tools, clarity, and time they need to do work they can stand behind.",
+      },
+      {
+        number: "13",
+        title: "Keep educating and retraining",
+        description:
+          "AI transformation only works if people keep learning how to use better tools and better methods.",
+      },
+      {
+        number: "14",
+        title: "Make transformation everyone’s job",
+        description:
+          "This is not a side project for leadership or IT. The whole company has to help redesign the system.",
+      },
+    ],
+  },
+
+  proofLayer: {
+    title: "Public Proof",
+    description:
+      "Read the web story to move fast. Open the source pages to verify the substance behind it.",
+    narrative:
+      "The source material stays visible because it proves the platform did not start as a marketing idea. The web edition does the compression. The atlas does the evidence.",
+    summaryPath: [
+      "Start with the preface, urgency, and roadmap if you need the sharpest read",
+      "Use the commitments to understand the operating standard behind the story",
+      "Jump into platform and friction sections when you need concrete business detail",
+    ],
+    sourcePath: [
+      "Open proof pages when the original diagram or screenshot carries the strongest evidence",
+      "Use the atlas dialog for fast inspection without losing your place",
+      "Use the original PDF when you want full slide context",
+    ],
+    closing:
+      "The right reading pattern is simple: orientation first, proof second, action third.",
   },
 
   hero: {
@@ -44,7 +385,7 @@ export const siteContent = {
       "Rendered slide dialog for quick inspection without leaving the report",
     ],
     confidentiality:
-      "This web edition preserves confidential workshop material. Treat links, screenshots, and PDF exports as restricted.",
+      "This web edition keeps the source material visible as public proof of the operating platform and the transformation opportunity.",
   },
 
   vision: {
@@ -137,6 +478,23 @@ export const siteContent = {
       "The strongest constraints are operational and product-led. Too much knowledge is embedded in people, too many workflows remain manual, and search, content, merchandising, and servicing quality are not yet consistently translated into a repeatable digital experience. The workshop repeatedly points toward the same pattern: ULIX has built enough traction to prove demand, yet still needs stronger product discipline, clearer prioritization, and more automation if it wants to evolve from a capable business into a more defensible platform. In other words, the opportunity is real, but the path depends on execution quality, not vision statements.",
       "The practical implication for leadership is straightforward. ULIX should resist spreading effort across every attractive idea in the report and instead sequence a focused program of near-term wins that improve conversion, servicing efficiency, and corporate readiness. Search quality, touchless processes, mobile experience, payments, and better business intelligence are valuable because they reinforce one another: each improvement compounds customer trust, staff productivity, and ecosystem credibility. If those capabilities mature in a disciplined order, ULIX can strengthen its position as both a travel operator and a technology partner for the wider agency network.",
       "The report therefore supports a simple executive reading: preserve the entrepreneurial edge, formalize the operating model, and invest where better systems unlock repeatability. ULIX does not need a reinvention narrative. It needs sharper sequencing, measurable delivery, and a tighter bridge between commercial ambition, product decisions, and daily execution across the region from this point.",
+    ],
+    fascinatingData: [
+      {
+        label: "Market Reach",
+        value: "40M+",
+        description: "Potential travelers accessible in the Balkan region",
+      },
+      {
+        label: "Productivity Gain",
+        value: "40%",
+        description: "Expected efficiency increase through touchless ticketing",
+      },
+      {
+        label: "Scale Ambition",
+        value: "500",
+        description: "Target number of sub-agency 'universes' to power",
+      },
     ],
     actionLenses: [
       {
@@ -846,6 +1204,8 @@ export const siteContent = {
       "Networks & Consolidators (ULIX's segment)",
       "Leisure Travel Ecosystems",
     ],
+    image: "/images/ulix_platform_vision.png",
+    automationInfographic: "/images/travel_automation_infographic.png",
   },
 
   amadeusPillars: {
@@ -1057,6 +1417,8 @@ export const siteContent = {
         sourcePages: [56, 154],
       },
     ],
+    image: "/images/ecosystem_growth.png",
+    corporateImage: "/images/corporate_travel_interface.png",
   },
 
   processesOverview: {
@@ -1100,7 +1462,7 @@ export const siteContent = {
     {
       page: 4,
       section: "Culture",
-      narrativeSectionId: "vision",
+      narrativeSectionId: "preface",
       title: "Founder belief system",
       summary:
         "This page explains that ULIX is not just a travel agency story; it is anchored in a personal operating philosophy around business, family, health, and balance.",
@@ -1116,7 +1478,7 @@ export const siteContent = {
     {
       page: 11,
       section: "Product",
-      narrativeSectionId: "products",
+      narrativeSectionId: "platform",
       title: "TMC system proof points",
       summary:
         "A screenshot collage of the TMC interface demonstrates that ULIX is already operating a real internal platform, not only describing an ambition.",
@@ -1132,7 +1494,7 @@ export const siteContent = {
     {
       page: 13,
       section: "Community",
-      narrativeSectionId: "hub",
+      narrativeSectionId: "platform",
       title: "Travel & Technology Hub",
       summary:
         "This page condenses the hub idea into a few concrete bullets: co-working, startup support, events, hackathons, and a possible Amadeus collaboration.",
@@ -1148,7 +1510,7 @@ export const siteContent = {
     {
       page: 21,
       section: "Systems",
-      narrativeSectionId: "systems",
+      narrativeSectionId: "platform",
       title: "Systems overview diagram",
       summary:
         "A single architecture slide maps content sources, the internal TMC, online brands, ticket servicing, and call-center operations.",
@@ -1164,7 +1526,7 @@ export const siteContent = {
     {
       page: 24,
       section: "Operations",
-      narrativeSectionId: "challenges",
+      narrativeSectionId: "friction",
       title: "Main operational observations",
       summary:
         "This slide distills the workshop's operational diagnosis into a few statements about Google Suite, modular offices, living-lab testing, and automation gaps.",
@@ -1180,7 +1542,7 @@ export const siteContent = {
     {
       page: 45,
       section: "Amadeus Context",
-      narrativeSectionId: "amadeus",
+      narrativeSectionId: "roadmap",
       title: "Live Travel Space framing",
       summary:
         "This slide captures the strategic lens Amadeus uses in the workshop: a move from classic GDS distribution toward an open, dynamic, connected platform model.",
@@ -1228,7 +1590,7 @@ export const siteContent = {
     {
       page: 81,
       section: "Conversion",
-      narrativeSectionId: "strategy",
+      narrativeSectionId: "roadmap",
       title: "Four pillars of conversion",
       summary:
         "This visual reduces a long solution stack into four simple levers: exhaustiveness, accuracy, accessibility, and performance.",
@@ -1244,7 +1606,7 @@ export const siteContent = {
     {
       page: 104,
       section: "Automation",
-      narrativeSectionId: "strategy",
+      narrativeSectionId: "roadmap",
       title: "Productivity suite",
       summary:
         "A practical automation slide focused on reducing errors, increasing task speed, and freeing agents for higher-value work.",
@@ -1277,20 +1639,11 @@ export const siteContent = {
 };
 
 export const navigationItems = [
-  { label: "Overview", id: "overview" },
-  { label: "Summary", id: "summary" },
-  { label: "Views", id: "views" },
-  { label: "Guide", id: "guide" },
-  { label: "Explorer", id: "explorer" },
-  { label: "Vision", id: "vision" },
-  { label: "Journey", id: "business" },
-  { label: "Business Model", id: "business-model" },
-  { label: "Products", id: "products" },
-  { label: "Tech", id: "systems" },
-  { label: "Hub", id: "hub" },
-  { label: "Amadeus", id: "amadeus" },
+  { label: "Preface", id: "preface" },
+  { label: "Why Now", id: "urgency" },
+  { label: "Commitments", id: "commitments" },
+  { label: "Platform", id: "platform" },
+  { label: "Friction", id: "friction" },
   { label: "Roadmap", id: "roadmap" },
-  { label: "Strategy", id: "strategy" },
-  { label: "Source", id: "atlas" },
-  { label: "Challenges", id: "challenges" },
+  { label: "Proof", id: "proof" },
 ];

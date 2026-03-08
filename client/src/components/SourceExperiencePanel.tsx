@@ -15,13 +15,13 @@ export function SourceExperiencePanel({
     <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr] items-start">
       <Card className="border-none p-7 shadow-sm bg-background">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
-          Web summary path
+          Narrative path
         </p>
         <h3 className="text-2xl font-bold text-foreground mb-4">
           Move from orientation to action
         </h3>
         <div className="space-y-3">
-          {siteContent.sourceExperience.summaryPath.map(item => (
+          {siteContent.proofLayer.summaryPath.map(item => (
             <div
               key={item}
               className="flex items-start gap-3 rounded-2xl border border-border/70 bg-secondary/20 p-4"
@@ -36,28 +36,28 @@ export function SourceExperiencePanel({
         <div className="mt-6 flex flex-wrap gap-3">
           <button
             type="button"
-            onClick={() => onJumpToSection("summary")}
+            onClick={() => onJumpToSection("urgency")}
             className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
           >
-            Open summary
+            Open the narrative
           </button>
           <button
             type="button"
-            onClick={() => onJumpToSection("views")}
+            onClick={() => onJumpToSection("roadmap")}
             className="rounded-full border border-primary/20 px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary/5"
           >
-            Browse stakeholder views
+            Jump to roadmap
           </button>
         </div>
       </Card>
 
       <Card className="border-none p-7 shadow-sm bg-foreground text-background">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
-          Source fidelity path
+          Proof path
         </p>
         <h3 className="text-2xl font-bold mb-4">Verify in the original deck</h3>
         <div className="space-y-3">
-          {siteContent.sourceExperience.sourcePath.map(item => (
+          {siteContent.proofLayer.sourcePath.map(item => (
             <div
               key={item}
               className="flex items-start gap-3 rounded-2xl border border-background/10 bg-background/5 p-4"
@@ -72,10 +72,10 @@ export function SourceExperiencePanel({
         <div className="mt-6 flex flex-wrap gap-3">
           <button
             type="button"
-            onClick={() => onJumpToSection("atlas")}
+            onClick={() => onJumpToSection("proof")}
             className="rounded-full bg-background px-5 py-2.5 text-sm font-semibold text-foreground"
           >
-            Open source atlas
+            Open proof atlas
           </button>
           <a
             href={getPdfPageHref()}
@@ -88,7 +88,7 @@ export function SourceExperiencePanel({
           </a>
         </div>
         <p className="mt-6 text-sm leading-relaxed text-background/70">
-          {siteContent.sourceExperience.confidentiality}
+          {siteContent.proofLayer.closing}
         </p>
       </Card>
     </div>
