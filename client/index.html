@@ -1,28 +1,61 @@
 <!doctype html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="description" content="ULIX Discovery Workshop Report - Transforming travel through technology and community innovation." />
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta
+      name="description"
+      content="Confidential web edition of the October 2018 ULIX Discovery Workshop Report, combining a fast summary, stakeholder routes, and source-page access to the original deck."
+    />
+    <meta
+      name="robots"
+      content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+    />
+    <meta name="referrer" content="same-origin" />
     <meta name="theme-color" content="#0F766E" />
+    <meta property="og:title" content="ULIX Discovery Workshop Report" />
+    <meta
+      property="og:description"
+      content="Confidential report summary with chapter explorer, stakeholder views, and source-page jumps into the original workshop deck."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/images/zagreb_skyline.png" />
+    <meta property="og:image:alt" content="ULIX report cover imagery" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ULIX Discovery Workshop Report" />
+    <meta
+      name="twitter:description"
+      content="Confidential report summary with source fidelity tools and stakeholder-specific entry paths."
+    />
+    <meta name="twitter:image" content="/images/zagreb_skyline.png" />
     <title>ULIX Discovery Workshop Report</title>
-    
-    <!-- Google Fonts: Poppins (headings) and Inter (body) -->
+
+    <!-- Google Fonts: Sora (display) and Source Serif 4 (reading) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+    <script type="module">
+      const endpoint = import.meta.env.VITE_ANALYTICS_ENDPOINT;
+      const websiteId = import.meta.env.VITE_ANALYTICS_WEBSITE_ID;
 
+      if (endpoint && websiteId) {
+        const analyticsScript = document.createElement("script");
+        analyticsScript.defer = true;
+        analyticsScript.src = `${endpoint.replace(/\/$/, "")}/umami`;
+        analyticsScript.dataset.websiteId = websiteId;
+        document.head.appendChild(analyticsScript);
+      }
+    </script>
+  </body>
 </html>
