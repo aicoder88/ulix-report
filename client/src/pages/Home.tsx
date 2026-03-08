@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { siteContent, navigationItems } from "@/lib/content";
 import { canTrackReportEvents, trackReportEvent } from "@/lib/analytics";
+import { withBase } from "@/lib/assets";
 import {
   buildSearchEntries,
   formatAtlasHash,
@@ -325,6 +326,7 @@ export default function Home() {
   const yParallax = useTransform(scrollYProgress, [0, 1], [0, 220]);
   const heroParallax = prefersReducedMotion ? 0 : yParallax;
   const heroSnapshotMetrics = siteContent.keyMetrics.slice(0, 4);
+  const openingStoryImages = siteContent.businessReview.sections.slice(0, 4);
   const platformProofItems = siteContent.sourceAtlas.filter(item =>
     siteContent.transformationNarrative.platform.sectionProofPages.includes(
       item.page
@@ -571,6 +573,31 @@ export default function Home() {
                   <p className="mb-6 text-lg leading-8 text-foreground/80">
                     {siteContent.preface.pullQuote}
                   </p>
+                  <div className="mb-6 grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
+                    <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                      <LazyImage
+                        src={withBase("/images/zagreb_skyline.png")}
+                        alt="Zagreb skyline representing ULIX's regional base"
+                        className="h-56 w-full object-cover"
+                      />
+                    </div>
+                    <div className="grid gap-3">
+                      <div className="overflow-hidden rounded-[1.5rem] border border-border/70 bg-secondary/30">
+                        <LazyImage
+                          src={withBase("/images/tech_architecture.png")}
+                          alt="ULIX technology architecture"
+                          className="h-[6.7rem] w-full object-cover"
+                        />
+                      </div>
+                      <div className="overflow-hidden rounded-[1.5rem] border border-border/70 bg-secondary/30">
+                        <LazyImage
+                          src={withBase("/images/innovation_hub.png")}
+                          alt="ULIX travel and technology hub"
+                          className="h-[6.7rem] w-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  </div>
                   <div className="mb-6 rounded-[1.75rem] border border-primary/15 bg-gradient-to-br from-primary/8 via-background to-accent/8 p-5">
                     <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                       Source anchor
@@ -698,6 +725,28 @@ export default function Home() {
                     <p className="mb-8 max-w-3xl text-lg leading-8 text-foreground/80">
                       {siteContent.transformationNarrative.business.lead}
                     </p>
+                    <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                      {openingStoryImages.map(item => (
+                        <div
+                          key={`${item.year}-${item.heading}`}
+                          className="overflow-hidden rounded-[1.5rem] border border-border/70 bg-background/80"
+                        >
+                          <LazyImage
+                            src={item.image}
+                            alt={item.heading}
+                            className="h-40 w-full object-cover"
+                          />
+                          <div className="p-4">
+                            <p className="brief-kicker mb-2 text-primary">
+                              {item.year}
+                            </p>
+                            <p className="text-sm font-bold leading-6 text-foreground">
+                              {item.heading}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                     <div className="grid gap-4 md:grid-cols-2">
                       {siteContent.transformationNarrative.business.pillars.map(
                         pillar => (
@@ -832,12 +881,30 @@ export default function Home() {
                   <p className="mb-6 text-lg leading-8 text-foreground/80">
                     {siteContent.transformationNarrative.platform.lead}
                   </p>
-                  <div className="mb-6 overflow-hidden rounded-[1.75rem] border border-border/70">
-                    <LazyImage
-                      src={siteContent.systemsOverview.image}
-                      alt="ULIX systems architecture"
-                      className="h-full w-full object-cover"
-                    />
+                  <div className="mb-6 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+                    <div className="overflow-hidden rounded-[1.75rem] border border-border/70">
+                      <LazyImage
+                        src={siteContent.systemsOverview.image}
+                        alt="ULIX systems architecture"
+                        className="h-full min-h-[21rem] w-full object-cover"
+                      />
+                    </div>
+                    <div className="grid gap-4">
+                      <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                        <LazyImage
+                          src={siteContent.travelHub.image}
+                          alt="ULIX travel and technology hub"
+                          className="h-[10rem] w-full object-cover"
+                        />
+                      </div>
+                      <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                        <LazyImage
+                          src={siteContent.recommendationRoadmap.corporateImage}
+                          alt="Corporate travel interface"
+                          className="h-[10rem] w-full object-cover"
+                        />
+                      </div>
+                    </div>
                   </div>
                   <div className="rounded-[1.75rem] bg-foreground px-5 py-5 text-background">
                     <p className="brief-kicker mb-2 text-primary">
@@ -1093,6 +1160,13 @@ export default function Home() {
                         </button>
                       ))}
                     </div>
+                  </div>
+                  <div className="mt-6 overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                    <LazyImage
+                      src={siteContent.recommendationRoadmap.image}
+                      alt="Ecosystem growth and roadmap illustration"
+                      className="h-56 w-full object-cover"
+                    />
                   </div>
                   <SectionCue
                     label="This roadmap only matters if readers can verify it fast. The next section keeps the original proof visible."

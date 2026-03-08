@@ -1,6 +1,7 @@
 import { navigationItems, siteContent } from "@/lib/content";
+import { withBase } from "@/lib/assets";
 
-export const ORIGINAL_PDF_PATH = "/ULIX_DiscoveryWorkshop_Report1.pdf";
+export const ORIGINAL_PDF_PATH = withBase("/ULIX_DiscoveryWorkshop_Report1.pdf");
 export const ATLAS_HASH_PREFIX = "#atlas-page-";
 
 export type SearchEntry =

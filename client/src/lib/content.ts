@@ -1,3 +1,5 @@
+import { withBase } from "@/lib/assets";
+
 /**
  * ULIX Discovery Workshop Report Content
  * ALL information from the original PDF report, organized for the website
@@ -866,7 +868,7 @@ export const siteContent = {
         year: "Background",
         content:
           "The founder brought a mix of sports, mathematics, and economics, along with a culture of 'do it, learn and adapt.' Early frustration with expensive traditional marketing pushed ULIX toward guerrilla tactics like balcony banners, branded cars, and other low-cost customer acquisition experiments.",
-        image: "/images/history/airplane.png",
+        image: withBase("/images/history/airplane.png"),
         tag: "Foundation",
       },
       {
@@ -874,7 +876,7 @@ export const siteContent = {
         year: "2001",
         content:
           "ULIX launched in 2001 around air travel, which the founder saw as broader, more dynamic, and easier to optimize than package holidays. Early setbacks in packaged travel sharpened the focus on ticketing and reinforced a scrappy, guerrilla-style operating culture.",
-        image: "/images/zagreb_skyline.png",
+        image: withBase("/images/zagreb_skyline.png"),
         tag: "Launch",
       },
       {
@@ -882,7 +884,7 @@ export const siteContent = {
         year: "2003",
         content:
           "A free airport transfer offer became a major growth driver at a time when taxi costs were high. The program was later dropped because it was hard to scale, but it established a pattern ULIX kept: test bold ideas, measure the result, and stop when the model breaks.",
-        image: "/images/history/airplane.png",
+        image: withBase("/images/history/airplane.png"),
         tag: "Breakthrough",
       },
       {
@@ -890,7 +892,7 @@ export const siteContent = {
         year: "2009",
         content:
           "ULIX launched AVIOKARTE.HR, leaned early into Google AdWords, and built trust with niche communities such as Chinese travelers in Croatia. The lesson was clear: in the Balkans, customers had to trust the company behind the fare, not just the price, which made transparency and reliability core brand assets.",
-        image: "/images/history/digital.png",
+        image: withBase("/images/history/digital.png"),
         tag: "Online-First",
       },
       {
@@ -898,7 +900,7 @@ export const siteContent = {
         year: "2015",
         content:
           "ULIX expanded into Slovenia and Serbia with localized brands, then into Poland. A German IATA license widened carrier access and special fares, while each market kept a local brand on top of a shared technology backbone.",
-        image: "/images/history/global.png",
+        image: withBase("/images/history/global.png"),
         tag: "Expansion",
       },
       {
@@ -906,7 +908,7 @@ export const siteContent = {
         year: "2016–2018",
         content:
           "Frustrated by weak regional travel tech and one-off feature delivery, ULIX began building its own TMC system. Those gaps pushed the company from agency work into product development and marked the clearest shift toward a technology-led business.",
-        image: "/images/tech_architecture.png",
+        image: withBase("/images/tech_architecture.png"),
         tag: "Tech-First",
       },
     ],
@@ -1112,7 +1114,7 @@ export const siteContent = {
     ],
     futureVision:
       "ULIX is exploring a co-innovation model with Amadeus and considering expansion into Bosnia and other Balkan markets, with the goal of building a regional network of travel innovation hubs.",
-    image: "/images/innovation_hub.png",
+    image: withBase("/images/innovation_hub.png"),
   },
 
   systemsOverview: {
@@ -1175,7 +1177,7 @@ export const siteContent = {
       { name: "AVIOKARTE.ORG", country: "Serbia", flag: "🇷🇸" },
       { name: "LOTEKSPERT.PL", country: "Poland", flag: "🇵🇱" },
     ],
-    image: "/images/tech_architecture.png",
+    image: withBase("/images/tech_architecture.png"),
   },
 
   amadeus: {
@@ -1204,8 +1206,8 @@ export const siteContent = {
       "Networks & Consolidators (ULIX's segment)",
       "Leisure Travel Ecosystems",
     ],
-    image: "/images/ulix_platform_vision.png",
-    automationInfographic: "/images/travel_automation_infographic.png",
+    image: withBase("/images/ulix_platform_vision.png"),
+    automationInfographic: withBase("/images/travel_automation_infographic.png"),
   },
 
   amadeusPillars: {
@@ -1417,8 +1419,8 @@ export const siteContent = {
         sourcePages: [56, 154],
       },
     ],
-    image: "/images/ecosystem_growth.png",
-    corporateImage: "/images/corporate_travel_interface.png",
+    image: withBase("/images/ecosystem_growth.png"),
+    corporateImage: withBase("/images/corporate_travel_interface.png"),
   },
 
   processesOverview: {
@@ -1468,7 +1470,7 @@ export const siteContent = {
         "This page explains that ULIX is not just a travel agency story; it is anchored in a personal operating philosophy around business, family, health, and balance.",
       whyItMatters:
         "It clarifies why the company behaves like a startup and why so much of the report ties strategy back to culture.",
-      image: "/report-pages/page-4.png",
+      image: withBase("/report-pages/page-4.png"),
       bullets: [
         "Shows the founder's values as a visual framework rather than a text paragraph.",
         "Helps explain the later emphasis on experimentation, autonomy, and movement.",
@@ -1484,7 +1486,7 @@ export const siteContent = {
         "A screenshot collage of the TMC interface demonstrates that ULIX is already operating a real internal platform, not only describing an ambition.",
       whyItMatters:
         "This is one of the strongest visual proofs that ULIX has product substance behind the strategy story.",
-      image: "/report-pages/page-11.png",
+      image: withBase("/report-pages/page-11.png"),
       bullets: [
         "Dashboard, queue, reporting, and account views show a live operating system.",
         "Supports the claim that ULIX is shifting from agency to product-and-services organization.",
@@ -1500,7 +1502,7 @@ export const siteContent = {
         "This page condenses the hub idea into a few concrete bullets: co-working, startup support, events, hackathons, and a possible Amadeus collaboration.",
       whyItMatters:
         "It turns an abstract community narrative into a tangible strategic asset for ULIX.",
-      image: "/report-pages/page-13.png",
+      image: withBase("/report-pages/page-13.png"),
       bullets: [
         "Shows the hub is part of the business platform, not a side project.",
         "Connects ULIX's local market role with regional ecosystem ambitions.",
@@ -1516,7 +1518,7 @@ export const siteContent = {
         "A single architecture slide maps content sources, the internal TMC, online brands, ticket servicing, and call-center operations.",
       whyItMatters:
         "This is the most information-dense systems page in the deck and one of the clearest examples of why source visuals must stay available.",
-      image: "/report-pages/page-21.png",
+      image: withBase("/report-pages/page-21.png"),
       bullets: [
         "Shows how GDS, LCC, hotel, and car content feed the platform.",
         "Maps front office brands to the internal TMC and manual servicing layers.",
@@ -1532,7 +1534,7 @@ export const siteContent = {
         "This slide distills the workshop's operational diagnosis into a few statements about Google Suite, modular offices, living-lab testing, and automation gaps.",
       whyItMatters:
         "It is the shortest honest summary of how ULIX currently operates and where process improvements still matter.",
-      image: "/report-pages/page-24.png",
+      image: withBase("/report-pages/page-24.png"),
       bullets: [
         "Confirms the TMC is tested internally before broader rollout.",
         "Explains the logic behind the 'travel agency as a service' model.",
@@ -1548,7 +1550,7 @@ export const siteContent = {
         "This slide captures the strategic lens Amadeus uses in the workshop: a move from classic GDS distribution toward an open, dynamic, connected platform model.",
       whyItMatters:
         "It explains why the rest of the recommendation deck emphasizes openness, APIs, ecosystem breadth, and collaborative product evolution.",
-      image: "/report-pages/page-45.png",
+      image: withBase("/report-pages/page-45.png"),
       bullets: [
         "Shows growth leading into a combined people-and-technology platform model.",
         "Turns a generic partner introduction into a clear frame for later recommendations.",
@@ -1564,7 +1566,7 @@ export const siteContent = {
         "The quick wins page groups immediate actions into content, flight search, merchandising, automation, mobile, payments, BI, and innovation.",
       whyItMatters:
         "This is the most compact executive summary of the near-term program across the whole PDF.",
-      image: "/report-pages/page-55.png",
+      image: withBase("/report-pages/page-55.png"),
       bullets: [
         "Useful for leadership readers who need the short version first.",
         "Makes it easier to structure the website around themes instead of vendor product names.",
@@ -1580,7 +1582,7 @@ export const siteContent = {
         "The second recommendation page shifts from quick wins to platform-level moves such as deeper Amadeus integration, virtual interline, and a consolidator B2B tool.",
       whyItMatters:
         "It separates immediate optimization from the more strategic platform roadmap.",
-      image: "/report-pages/page-56.png",
+      image: withBase("/report-pages/page-56.png"),
       bullets: [
         "Clarifies what belongs in the next phase rather than the first sprint.",
         "Connects product-market expansion with deeper technical integration.",
@@ -1596,7 +1598,7 @@ export const siteContent = {
         "This visual reduces a long solution stack into four simple levers: exhaustiveness, accuracy, accessibility, and performance.",
       whyItMatters:
         "It is the cleanest bridge between the dense Amadeus product deck and a readable web narrative.",
-      image: "/report-pages/page-81.png",
+      image: withBase("/report-pages/page-81.png"),
       bullets: [
         "Turns dozens of later capability slides into a simple mental model.",
         "Matches the website's current recommendation pillars and validates them visually.",
@@ -1612,7 +1614,7 @@ export const siteContent = {
         "A practical automation slide focused on reducing errors, increasing task speed, and freeing agents for higher-value work.",
       whyItMatters:
         "It grounds the website's automation story in a concrete operational outcome rather than abstract innovation language.",
-      image: "/report-pages/page-104.png",
+      image: withBase("/report-pages/page-104.png"),
       bullets: [
         "Explains why automation is mainly an efficiency and service-quality story.",
         "Useful proof for recommendations around smart flows, triggers, and quality monitoring.",
@@ -1628,7 +1630,7 @@ export const siteContent = {
         "The report closes with a short next-steps slide: prioritize the action plan, draft a new commercial agreement, and launch new workstreams.",
       whyItMatters:
         "It makes the workshop feel like a decision document, not just an informational deck.",
-      image: "/report-pages/page-154.png",
+      image: withBase("/report-pages/page-154.png"),
       bullets: [
         "Confirms the report ends in explicit action, not open-ended analysis.",
         "Helpful for framing the final section of the website.",

@@ -158,7 +158,10 @@ const plugins = [
   vitePluginManusDebugCollector(),
 ];
 
+const publicBasePath = process.env.PUBLIC_BASE_PATH ?? "/";
+
 export default defineConfig({
+  base: publicBasePath,
   plugins,
   resolve: {
     alias: {
