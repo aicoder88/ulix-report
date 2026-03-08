@@ -13,7 +13,7 @@ export function SourceExperiencePanel({
 }: SourceExperiencePanelProps) {
   return (
     <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr] items-start">
-      <Card className="border-none p-7 shadow-sm bg-background">
+      <Card className="border-none p-5 shadow-sm bg-background">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
           Narrative path
         </p>
@@ -51,7 +51,7 @@ export function SourceExperiencePanel({
         </div>
       </Card>
 
-      <Card className="border-none p-7 shadow-sm bg-foreground text-background">
+      <Card className="border-none p-5 shadow-sm bg-foreground text-background">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
           Proof path
         </p>

@@ -168,19 +168,19 @@
   /* Typography System - Editorial briefing */
   h1 {
     font-family: var(--font-display);
-    @apply text-4xl font-bold tracking-tight md:text-5xl;
+    @apply text-5xl font-extrabold tracking-tight md:text-7xl;
   }
   h2 {
     font-family: var(--font-display);
-    @apply text-3xl font-bold tracking-tight md:text-4xl;
+    @apply text-4xl font-extrabold tracking-tight md:text-5xl;
   }
   h3 {
     font-family: var(--font-display);
-    @apply text-2xl font-semibold tracking-tight md:text-3xl;
+    @apply text-3xl font-bold tracking-tight md:text-4xl;
   }
   h4 {
     font-family: var(--font-display);
-    @apply text-xl font-semibold md:text-2xl;
+    @apply text-2xl font-bold md:text-3xl;
   }
   h5 {
     font-family: var(--font-display);
@@ -192,7 +192,7 @@
   }
 
   p {
-    @apply text-base leading-8;
+    @apply text-lg leading-relaxed md:text-xl;
   }
 
   /* Smooth transitions for interactive elements */
@@ -297,7 +297,7 @@
   }
 
   .executive-prose p {
-    @apply text-[1.06rem] leading-8 text-foreground/88;
+    @apply text-xl leading-relaxed text-foreground/88 md:text-2xl;
   }
 
   @media (min-width: 1024px) {

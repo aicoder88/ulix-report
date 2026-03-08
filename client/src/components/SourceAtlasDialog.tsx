@@ -37,16 +37,16 @@ export function SourceAtlasDialog({
   return (
     <Dialog open={Boolean(item)} onOpenChange={onOpenChange}>
       {item && (
-        <DialogContent className="max-w-6xl p-0 overflow-hidden border-none">
-          <div className="grid lg:grid-cols-[0.92fr_1.08fr]">
-            <div className="bg-secondary/30 border-b lg:border-b-0 lg:border-r border-border">
+        <DialogContent className="max-w-[95vw] lg:max-w-6xl p-0 overflow-hidden border-none focus:outline-none">
+          <div className="grid lg:grid-cols-[1.1fr_0.9fr] max-h-[90vh]">
+            <div className="bg-secondary/40 border-b lg:border-b-0 lg:border-r border-border flex items-center justify-center overflow-hidden">
               <img
                 src={item.image}
                 alt={`${item.title} from page ${item.page}`}
-                className="w-full h-full object-contain object-top max-h-[78vh]"
+                className="w-full h-auto max-h-[85vh] object-contain shadow-2xl"
               />
             </div>
-            <div className="max-h-[78vh] overflow-y-auto p-6 md:p-8">
+            <div className="max-h-[90vh] overflow-y-auto p-6 md:p-8">
               <div className="flex flex-wrap items-center gap-3 mb-4">
                 <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
                   Source page {item.page}

@@ -84,28 +84,26 @@ function SectionHeader({
       whileInView="visible"
       viewport={{ once: true, amount: 0.25 }}
       variants={staggerContainer}
-      className="mb-14 text-center"
+      className="mb-6 text-center"
     >
       <motion.p
         variants={fadeInUp}
-        className={`brief-kicker mb-4 ${invert ? "text-primary" : "text-primary"}`}
+        className={`brief-kicker mb-2 ${invert ? "text-primary" : "text-primary"}`}
       >
         {accent}
       </motion.p>
       <motion.h2
         variants={fadeInUp}
-        className={`mx-auto mb-4 max-w-4xl text-4xl font-extrabold md:text-5xl ${
-          invert ? "text-background" : "text-foreground"
-        }`}
+        className={`mx-auto mb-4 max-w-4xl text-5xl font-extrabold md:text-6xl ${invert ? "text-background" : "text-foreground"
+          }`}
       >
         {title}
       </motion.h2>
       {subtitle && (
         <motion.p
           variants={fadeInUp}
-          className={`mx-auto max-w-3xl text-lg leading-relaxed ${
-            invert ? "text-background/72" : "text-muted-foreground"
-          }`}
+          className={`mx-auto max-w-3xl text-xl leading-relaxed ${invert ? "text-background/72" : "text-muted-foreground"
+            }`}
         >
           {subtitle}
         </motion.p>
@@ -127,25 +125,22 @@ function SectionCue({
 }) {
   return (
     <div
-      className={`mt-14 flex items-center justify-between gap-4 border-t pt-6 ${
-        invert ? "border-background/12" : "border-border/80"
-      }`}
+      className={`mt-6 flex items-center justify-between gap-4 border-t pt-4 ${invert ? "border-background/12" : "border-border/80"
+        }`}
     >
       <p
-        className={`text-sm leading-relaxed ${
-          invert ? "text-background/68" : "text-muted-foreground"
-        }`}
+        className={`text-sm leading-relaxed ${invert ? "text-background/68" : "text-muted-foreground"
+          }`}
       >
         {label}
       </p>
       <button
         type="button"
         onClick={onClick}
-        className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold ${
-          invert
-            ? "bg-background text-foreground"
-            : "border border-primary/20 text-primary hover:bg-primary/5"
-        }`}
+        className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold ${invert
+          ? "bg-background text-foreground"
+          : "border border-primary/20 text-primary hover:bg-primary/5"
+          }`}
       >
         {targetLabel}
         <ChevronDown className="h-4 w-4" />
@@ -387,11 +382,10 @@ export default function Home() {
                     aria-current={
                       activeNav === item.id ? "location" : undefined
                     }
-                    className={`rounded-full px-3 py-1.5 text-xs font-semibold whitespace-nowrap ${
-                      activeNav === item.id
-                        ? "bg-primary/15 text-primary"
-                        : "text-muted-foreground hover:bg-primary/5 hover:text-primary"
-                    }`}
+                    className={`rounded-full px-3 py-1.5 text-xs font-semibold whitespace-nowrap ${activeNav === item.id
+                      ? "bg-primary/15 text-primary"
+                      : "text-muted-foreground hover:bg-primary/5 hover:text-primary"
+                      }`}
                   >
                     {item.label}
                   </motion.button>
@@ -435,11 +429,10 @@ export default function Home() {
                         aria-current={
                           activeNav === item.id ? "location" : undefined
                         }
-                        className={`rounded-lg px-3 py-2 text-left text-sm font-medium ${
-                          activeNav === item.id
-                            ? "bg-primary/10 text-primary"
-                            : "text-muted-foreground hover:bg-muted"
-                        }`}
+                        className={`rounded-lg px-3 py-2 text-left text-sm font-medium ${activeNav === item.id
+                          ? "bg-primary/10 text-primary"
+                          : "text-muted-foreground hover:bg-muted"
+                          }`}
                       >
                         {item.label}
                       </button>
@@ -454,32 +447,42 @@ export default function Home() {
         <main id="main-content">
           <section
             id="preface"
-            className="relative flex min-h-screen items-center overflow-hidden border-b border-border/60 bg-gradient-to-br from-background via-background to-primary/5 pb-20 pt-32 md:pb-28 md:pt-44"
+            className="relative flex min-h-[90vh] items-center overflow-hidden border-b border-border/60 bg-gradient-to-br from-background via-background to-primary/5 pb-8 pt-12 md:pb-12 md:pt-16"
           >
             <motion.div
               style={{ y: heroParallax }}
               className="pointer-events-none absolute inset-0"
             >
-              <div className="absolute right-0 top-16 h-[38rem] w-[38rem] rounded-full bg-primary/12 blur-[140px]" />
-              <div className="absolute bottom-0 left-0 h-[32rem] w-[32rem] rounded-full bg-accent/12 blur-[120px]" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-background" />
+              <div className="absolute right-[-10%] top-[-10%] h-[52rem] w-[52rem] -rotate-12 rounded-full bg-primary/18 blur-[160px]" />
+              <div className="absolute bottom-[-5%] left-[-5%] h-[44rem] w-[44rem] rounded-full bg-accent/18 blur-[140px]" />
+
+              {/* Added large background hero image */}
+              <div className="absolute right-0 top-0 h-full w-full opacity-[0.14] mix-blend-overlay">
+                <LazyImage
+                  src={siteContent.hero.image}
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </motion.div>
             <div className="container relative z-10">
               <motion.div
                 initial="hidden"
                 animate="visible"
                 variants={staggerContainer}
-                className="grid items-start gap-10 xl:grid-cols-[1.08fr_0.92fr]"
+                className="grid items-center gap-10 xl:grid-cols-[1.12fr_0.88fr]"
               >
                 <div className="max-w-4xl">
                   <motion.div
                     variants={fadeInUp}
-                    className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-4 py-2 text-sm font-bold text-primary shadow-sm"
+                    className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-4 py-2 text-sm font-bold text-primary shadow-sm"
                   >
                     {siteContent.preface.badge}
                   </motion.div>
                   <motion.p
                     variants={fadeInUp}
-                    className="brief-kicker mb-4 text-accent"
+                    className="brief-kicker mb-2 text-accent"
                   >
                     Inspiring preface
                   </motion.p>
@@ -499,13 +502,13 @@ export default function Home() {
                   </motion.p>
                   <motion.p
                     variants={fadeInUp}
-                    className="mb-10 max-w-3xl text-lg leading-8 text-foreground/80"
+                    className="mb-4 max-w-3xl text-lg leading-8 text-foreground/80"
                   >
                     {siteContent.preface.description}
                   </motion.p>
                   <motion.div
                     variants={fadeInUp}
-                    className="mb-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap"
+                    className="mb-4 flex flex-col gap-4 sm:flex-row sm:flex-wrap"
                   >
                     <motion.button
                       whileHover={{
@@ -558,11 +561,59 @@ export default function Home() {
                       </motion.div>
                     ))}
                   </motion.div>
+
+                  <motion.div
+                    variants={fadeInUp}
+                    className="mt-8 grid gap-4 sm:grid-cols-[1fr_auto]"
+                  >
+                    <div className="rounded-[1.75rem] border border-primary/15 bg-gradient-to-br from-primary/8 via-background to-accent/8 p-5">
+                      <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                        Source anchor
+                      </p>
+                      <p className="text-sm leading-7 text-foreground/78">
+                        {siteContent.meta.title} began as a workshop deck in{" "}
+                        {siteContent.meta.date}. This edition reframes that source
+                        as a current AI transformation narrative while keeping the
+                        original proof public.
+                      </p>
+                      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                        {siteContent.meta.preparedBy}
+                      </p>
+                    </div>
+
+                    <div className="grid gap-3 sm:grid-cols-2">
+                      {heroSnapshotMetrics.map(metric => {
+                        const Icon = iconMap[metric.icon] || Zap;
+                        return (
+                          <div
+                            key={metric.label}
+                            className="rounded-3xl border border-border/70 bg-background/70 p-4"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div
+                                className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl ${metric.bg}`}
+                              >
+                                <Icon className={`h-5 w-5 ${metric.color}`} />
+                              </div>
+                              <div>
+                                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
+                                  {metric.label}
+                                </p>
+                                <p className="text-lg font-extrabold text-foreground">
+                                  {metric.value}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </motion.div>
                 </div>
 
                 <motion.div
                   variants={fadeInUp}
-                  className="section-shell rounded-[2rem] p-6 sm:p-8 xl:mt-8"
+                  className="section-shell rounded-[2rem] p-6 sm:p-8"
                 >
                   <p className="brief-kicker mb-3 text-primary">
                     Management standard
@@ -573,77 +624,36 @@ export default function Home() {
                   <p className="mb-6 text-lg leading-8 text-foreground/80">
                     {siteContent.preface.pullQuote}
                   </p>
-                  <div className="mb-6 rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
+                  <div className="mb-4 rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
                     <p className="brief-kicker mb-2 text-primary">Next move</p>
                     <p className="text-sm leading-7 text-foreground/82">
                       {siteContent.preface.nextStep}
                     </p>
                   </div>
-                  <div className="mb-6 grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
-                    <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                  <div className="grid gap-4 sm:grid-cols-[1.3fr_0.7fr]">
+                    <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-secondary/30 shadow-2xl transition-transform hover:scale-[1.02]">
                       <LazyImage
-                        src={withBase("/images/zagreb_skyline.png")}
-                        alt="Zagreb skyline representing ULIX's regional base"
-                        className="h-56 w-full object-cover"
+                        src={withBase("/images/hero_concept_v2.png")}
+                        alt="ULIX's vision of the future travel agency"
+                        className="h-[28rem] w-full object-cover md:h-[32rem]"
                       />
                     </div>
-                    <div className="grid gap-3">
-                      <div className="overflow-hidden rounded-[1.5rem] border border-border/70 bg-secondary/30">
+                    <div className="grid gap-4">
+                      <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30 shadow-xl transition-transform hover:scale-[1.02]">
                         <LazyImage
                           src={withBase("/images/tech_architecture.png")}
                           alt="ULIX technology architecture"
-                          className="h-[6.7rem] w-full object-cover"
+                          className="h-52 w-full object-cover md:h-[15.25rem]"
                         />
                       </div>
-                      <div className="overflow-hidden rounded-[1.5rem] border border-border/70 bg-secondary/30">
+                      <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30 shadow-xl transition-transform hover:scale-[1.02]">
                         <LazyImage
-                          src={withBase("/images/innovation_hub.png")}
+                          src={withBase("/images/travel_hub_community_v2.png")}
                           alt="ULIX travel and technology hub"
-                          className="h-[6.7rem] w-full object-cover"
+                          className="h-52 w-full object-cover md:h-[15.25rem]"
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="mb-6 rounded-[1.75rem] border border-primary/15 bg-gradient-to-br from-primary/8 via-background to-accent/8 p-5">
-                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-primary">
-                      Source anchor
-                    </p>
-                    <p className="text-sm leading-7 text-foreground/78">
-                      {siteContent.meta.title} began as a workshop deck in{" "}
-                      {siteContent.meta.date}. This edition reframes that source
-                      as a current AI transformation narrative while keeping the
-                      original proof public.
-                    </p>
-                    <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
-                      {siteContent.meta.preparedBy}
-                    </p>
-                  </div>
-                  <div className="grid gap-3 sm:grid-cols-2">
-                    {heroSnapshotMetrics.map(metric => {
-                      const Icon = iconMap[metric.icon] || Zap;
-                      return (
-                        <div
-                          key={metric.label}
-                          className="rounded-3xl border border-border/70 bg-background/70 p-4"
-                        >
-                          <div className="mb-3 flex items-center gap-3">
-                            <div
-                              className={`flex h-11 w-11 items-center justify-center rounded-2xl ${metric.bg}`}
-                            >
-                              <Icon className={`h-5 w-5 ${metric.color}`} />
-                            </div>
-                            <div>
-                              <p className="text-xs font-bold uppercase tracking-[0.18em] text-muted-foreground">
-                                {metric.label}
-                              </p>
-                              <p className="text-xl font-extrabold text-foreground">
-                                {metric.value}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
                   </div>
                 </motion.div>
               </motion.div>
@@ -652,7 +662,7 @@ export default function Home() {
 
           <section
             id="urgency"
-            className="relative overflow-hidden bg-secondary/20 py-24 md:py-32"
+            className="relative overflow-hidden bg-secondary/20 py-8 md:py-12"
           >
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-primary/8 via-transparent to-transparent" />
             <div className="container relative z-10">
@@ -661,33 +671,67 @@ export default function Home() {
                 title={siteContent.transformationNarrative.urgency.title}
                 subtitle={siteContent.transformationNarrative.urgency.subtitle}
               />
-              <div className="grid gap-8 xl:grid-cols-[0.92fr_1.08fr]">
-                <motion.div
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true, amount: 0.2 }}
-                  variants={fadeInUp}
-                  className="section-shell rounded-[2rem] p-7 lg:sticky lg:top-28 lg:self-start"
-                >
-                  <p className="brief-kicker mb-3 text-primary">Lead</p>
-                  <h3 className="mb-4 text-3xl font-extrabold text-foreground">
-                    {siteContent.transformationNarrative.urgency.lead}
-                  </h3>
-                  <div className="space-y-3">
-                    {siteContent.transformationNarrative.urgency.facts.map(
-                      fact => (
-                        <div
-                          key={fact}
-                          className="rounded-2xl border border-border/70 bg-background/72 p-4"
-                        >
-                          <p className="text-sm leading-7 text-foreground/82">
-                            {fact}
-                          </p>
-                        </div>
-                      )
-                    )}
+              <div className="grid gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+                <div className="space-y-6">
+                  <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={fadeInUp}
+                    className="section-shell rounded-[2rem] p-7"
+                  >
+                    <p className="brief-kicker mb-3 text-primary">Lead</p>
+                    <h3 className="mb-4 text-3xl font-extrabold text-foreground">
+                      {siteContent.transformationNarrative.urgency.lead}
+                    </h3>
+                    <div className="space-y-4">
+                      {siteContent.transformationNarrative.urgency.facts.map(
+                        fact => (
+                          <div
+                            key={fact}
+                            className="rounded-2xl border border-border/70 bg-background/72 p-5"
+                          >
+                            <p className="text-sm leading-8 text-foreground/82">
+                              {fact}
+                            </p>
+                          </div>
+                        )
+                      )}
+                      <div className="mt-8 overflow-hidden rounded-[2rem] border border-border/70 bg-secondary/30 shadow-2xl transition-transform hover:scale-[1.01]">
+                        <LazyImage
+                          src={siteContent.transformationNarrative.urgency.image!}
+                          alt="AI Copilot helping agents"
+                          className="h-80 w-full object-cover"
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+
+                  <div className="grid gap-4 md:grid-cols-2">
+                    <div className="rounded-[1.5rem] bg-foreground px-5 py-5 text-background">
+                      <p className="brief-kicker mb-2 text-primary">
+                        AI implication
+                      </p>
+                      <p className="text-sm leading-7 text-background/82">
+                        {
+                          siteContent.transformationNarrative.business
+                            .aiImplication
+                        }
+                      </p>
+                    </div>
+                    <div className="rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
+                      <p className="brief-kicker mb-2 text-primary">
+                        Next action
+                      </p>
+                      <p className="text-sm leading-7 text-foreground/80">
+                        {
+                          siteContent.transformationNarrative.business
+                            .nextAction
+                        }
+                      </p>
+                    </div>
                   </div>
-                </motion.div>
+                </div>
 
                 <div className="space-y-6">
                   <motion.div
@@ -731,22 +775,22 @@ export default function Home() {
                     <p className="mb-8 max-w-3xl text-lg leading-8 text-foreground/80">
                       {siteContent.transformationNarrative.business.lead}
                     </p>
-                    <div className="mb-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                    <div className="mb-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                       {openingStoryImages.map(item => (
                         <div
                           key={`${item.year}-${item.heading}`}
-                          className="overflow-hidden rounded-[1.5rem] border border-border/70 bg-background/80"
+                          className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-background/80 transition-all hover:shadow-2xl hover:scale-[1.02]"
                         >
                           <LazyImage
                             src={item.image}
                             alt={item.heading}
-                            className="h-40 w-full object-cover"
+                            className="h-64 w-full object-cover md:h-72"
                           />
-                          <div className="p-4">
+                          <div className="p-5">
                             <p className="brief-kicker mb-2 text-primary">
                               {item.year}
                             </p>
-                            <p className="text-sm font-bold leading-6 text-foreground">
+                            <p className="text-base font-bold leading-7 text-foreground">
                               {item.heading}
                             </p>
                           </div>
@@ -770,30 +814,6 @@ export default function Home() {
                         )
                       )}
                     </div>
-                    <div className="mt-6 grid gap-4 md:grid-cols-2">
-                      <div className="rounded-[1.5rem] bg-foreground px-5 py-5 text-background">
-                        <p className="brief-kicker mb-2 text-primary">
-                          AI implication
-                        </p>
-                        <p className="text-sm leading-7 text-background/82">
-                          {
-                            siteContent.transformationNarrative.business
-                              .aiImplication
-                          }
-                        </p>
-                      </div>
-                      <div className="rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
-                        <p className="brief-kicker mb-2 text-primary">
-                          Next action
-                        </p>
-                        <p className="text-sm leading-7 text-foreground/80">
-                          {
-                            siteContent.transformationNarrative.business
-                              .nextAction
-                          }
-                        </p>
-                      </div>
-                    </div>
                     <SectionCue
                       label="The point of the story is not biography. It is to show why a system-first transformation is now possible."
                       targetLabel="Read the 14 commitments"
@@ -807,7 +827,7 @@ export default function Home() {
 
           <section
             id="commitments"
-            className="relative overflow-hidden bg-foreground py-24 text-background md:py-32"
+            className="relative overflow-hidden bg-foreground py-8 text-background md:py-12"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/18 via-transparent to-transparent" />
             <div className="container relative z-10">
@@ -817,7 +837,7 @@ export default function Home() {
                 subtitle={siteContent.operatingCommitments.subtitle}
                 invert
               />
-              <div className="grid gap-8 xl:grid-cols-[0.78fr_1.22fr]">
+              <div className="grid gap-6 xl:grid-cols-[0.8fr_1.2fr]">
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -846,6 +866,30 @@ export default function Home() {
                     onClick={() => scrollToSection("platform")}
                     invert
                   />
+
+                  <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                    {siteContent.operatingCommitments.items
+                      .slice(0, 4)
+                      .map(item => (
+                        <motion.div
+                          key={item.number}
+                          variants={fadeInUp}
+                          className="rounded-[1.75rem] border border-background/10 bg-background/6 p-5"
+                        >
+                          <div className="mb-3 flex items-center gap-3">
+                            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/16 text-sm font-extrabold text-primary">
+                              {item.number}
+                            </span>
+                            <p className="text-lg font-bold text-background">
+                              {item.title}
+                            </p>
+                          </div>
+                          <p className="text-sm leading-7 text-background/78">
+                            {item.description}
+                          </p>
+                        </motion.div>
+                      ))}
+                  </div>
                 </motion.div>
                 <motion.div
                   initial="hidden"
@@ -854,25 +898,27 @@ export default function Home() {
                   variants={staggerContainer}
                   className="grid gap-4 md:grid-cols-2"
                 >
-                  {siteContent.operatingCommitments.items.map(item => (
-                    <motion.div
-                      key={item.number}
-                      variants={fadeInUp}
-                      className="rounded-[1.75rem] border border-background/10 bg-background/6 p-5"
-                    >
-                      <div className="mb-3 flex items-center gap-3">
-                        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/16 text-sm font-extrabold text-primary">
-                          {item.number}
-                        </span>
-                        <p className="text-lg font-bold text-background">
-                          {item.title}
+                  {siteContent.operatingCommitments.items
+                    .slice(4)
+                    .map(item => (
+                      <motion.div
+                        key={item.number}
+                        variants={fadeInUp}
+                        className="rounded-[1.75rem] border border-background/10 bg-background/6 p-5"
+                      >
+                        <div className="mb-3 flex items-center gap-3">
+                          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/16 text-sm font-extrabold text-primary">
+                            {item.number}
+                          </span>
+                          <p className="text-lg font-bold text-background">
+                            {item.title}
+                          </p>
+                        </div>
+                        <p className="text-sm leading-7 text-background/78">
+                          {item.description}
                         </p>
-                      </div>
-                      <p className="text-sm leading-7 text-background/78">
-                        {item.description}
-                      </p>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    ))}
                 </motion.div>
               </div>
             </div>
@@ -880,7 +926,7 @@ export default function Home() {
 
           <section
             id="platform"
-            className="relative overflow-hidden bg-background py-24 md:py-32"
+            className="relative overflow-hidden bg-background py-8 md:py-12"
           >
             <div className="container">
               <SectionHeader
@@ -888,7 +934,7 @@ export default function Home() {
                 title={siteContent.transformationNarrative.platform.title}
                 subtitle={siteContent.transformationNarrative.platform.subtitle}
               />
-              <div className="grid gap-8 xl:grid-cols-[1.02fr_0.98fr]">
+              <div className="grid gap-6 xl:grid-cols-[1.02fr_0.98fr]">
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -899,27 +945,27 @@ export default function Home() {
                   <p className="mb-6 text-lg leading-8 text-foreground/80">
                     {siteContent.transformationNarrative.platform.lead}
                   </p>
-                  <div className="mb-6 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
-                    <div className="overflow-hidden rounded-[1.75rem] border border-border/70">
+                  <div className="mb-6 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+                    <div className="overflow-hidden rounded-[2.5rem] border border-border/70 shadow-2xl transition-transform hover:scale-[1.02]">
                       <LazyImage
                         src={siteContent.systemsOverview.image}
                         alt="ULIX systems architecture"
-                        className="h-full min-h-[21rem] w-full object-cover"
+                        className="h-full min-h-[32rem] w-full object-cover"
                       />
                     </div>
-                    <div className="grid gap-4">
-                      <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                    <div className="grid gap-6">
+                      <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-secondary/30 shadow-xl transition-transform hover:scale-[1.02]">
                         <LazyImage
                           src={siteContent.travelHub.image}
                           alt="ULIX travel and technology hub"
-                          className="h-[10rem] w-full object-cover"
+                          className="h-64 w-full object-cover md:h-[15.55rem]"
                         />
                       </div>
-                      <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                      <div className="overflow-hidden rounded-[2rem] border border-border/70 bg-secondary/30 shadow-xl transition-transform hover:scale-[1.02]">
                         <LazyImage
                           src={siteContent.recommendationRoadmap.corporateImage}
                           alt="Corporate travel interface"
-                          className="h-[10rem] w-full object-cover"
+                          className="h-64 w-full object-cover md:h-[15.55rem]"
                         />
                       </div>
                     </div>
@@ -1033,7 +1079,7 @@ export default function Home() {
 
           <section
             id="friction"
-            className="relative overflow-hidden bg-foreground py-24 text-background md:py-32"
+            className="relative overflow-hidden bg-foreground py-8 text-background md:py-12"
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-accent/18 via-transparent to-transparent" />
             <div className="container relative z-10">
@@ -1054,7 +1100,7 @@ export default function Home() {
                   {siteContent.transformationNarrative.friction.lead}
                 </p>
               </motion.div>
-              <div className="grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
+              <div className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -1093,6 +1139,13 @@ export default function Home() {
                   variants={fadeInUp}
                   className="section-shell-dark rounded-[2rem] p-7"
                 >
+                  <div className="mb-8 overflow-hidden rounded-[2.5rem] border border-background/20 bg-background/5 shadow-2xl transition-transform hover:scale-[1.01]">
+                    <LazyImage
+                      src={siteContent.transformationNarrative.friction.image!}
+                      alt="Data flowing through a smart filter"
+                      className="h-72 w-full object-cover md:h-80"
+                    />
+                  </div>
                   <p className="brief-kicker mb-3 text-primary">Do next</p>
                   <h3 className="mb-4 text-3xl font-extrabold text-background">
                     AI should start where work repeats and quality matters.
@@ -1132,7 +1185,7 @@ export default function Home() {
 
           <section
             id="roadmap"
-            className="relative overflow-hidden bg-secondary/25 py-24 md:py-32"
+            className="relative overflow-hidden bg-secondary/25 py-8 md:py-12"
           >
             <div className="container">
               <SectionHeader
@@ -1152,7 +1205,7 @@ export default function Home() {
                   )
                 )}
               </div>
-              <div className="grid gap-8 xl:grid-cols-[0.78fr_1.22fr]">
+              <div className="grid gap-6 xl:grid-cols-[0.78fr_1.22fr]">
                 <motion.div
                   initial="hidden"
                   whileInView="visible"
@@ -1198,11 +1251,11 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                  <div className="mt-6 overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
+                  <div className="mt-8 overflow-hidden rounded-[2.5rem] border border-border/70 bg-secondary/30 shadow-2xl transition-transform hover:scale-[1.02]">
                     <LazyImage
                       src={siteContent.recommendationRoadmap.image}
                       alt="Ecosystem growth and roadmap illustration"
-                      className="h-56 w-full object-cover"
+                      className="h-80 w-full object-cover md:h-[28rem]"
                     />
                   </div>
                   <SectionCue
@@ -1264,7 +1317,7 @@ export default function Home() {
 
           <section
             id="proof"
-            className="relative overflow-hidden bg-background py-24 md:py-32"
+            className="relative overflow-hidden bg-background py-8 md:py-12"
           >
             <div className="container">
               <SectionHeader
@@ -1308,12 +1361,12 @@ export default function Home() {
                     variants={fadeInUp}
                     className="section-shell overflow-hidden rounded-[2rem]"
                   >
-                    <div className="grid gap-0 md:grid-cols-[0.84fr_1.16fr]">
+                    <div className="grid gap-0 md:grid-cols-[0.95fr_1.05fr]">
                       <div className="border-b border-border/70 bg-secondary/30 md:border-b-0 md:border-r">
                         <LazyImage
                           src={item.image}
                           alt={`${item.title} from page ${item.page}`}
-                          className="h-full w-full object-cover object-top"
+                          className="h-80 w-full object-cover object-top md:h-full md:min-h-[27rem]"
                         />
                       </div>
                       <div className="p-6">
@@ -1407,7 +1460,7 @@ export default function Home() {
           onOpenPage={openAtlasPage}
           onOpenPdf={handlePdfOpen}
         />
-      </div>
+      </div >
     </>
   );
 }

@@ -44,6 +44,7 @@ export const siteContent = {
       title: "Why This Moment Belongs To ULIX",
       subtitle:
         "The workshop identified platform potential. Today ULIX can turn that potential into a cleaner, faster, more scalable operating model with AI in the loop.",
+      image: withBase("/images/ai_travel_copilot.png"),
       lead: "ULIX starts from a rare position of strength: real reach, real brands, a real TMC, and a habit of building from live operating demand. That means the company does not need to invent a future story. It needs to accelerate the one it already earned.",
       cards: [
         {
@@ -147,6 +148,7 @@ export const siteContent = {
       title: "Where The Biggest Gains Can Be Unlocked",
       subtitle:
         "The limiting factor is not ambition. It is the amount of value still waiting to be unlocked from repeatable work, searchable knowledge, and cleaner operating flows.",
+      image: withBase("/images/smart_queue_automation.png"),
       lead: "The report points to a rich source of upside: too many important tasks still depend on memory, handoffs, and manual follow-through. Every one of those moments is an opportunity to increase speed, protect quality, and free teams for higher-value work.",
       issues: [
         {
@@ -368,6 +370,7 @@ export const siteContent = {
   hero: {
     title: "ULIX Discovery Workshop Report",
     subtitle: "A Growth Platform For Independent Travel Agencies",
+    image: withBase("/images/hero_concept_v2.png"),
     description:
       "A 155-page Amadeus workshop deck from October 2018, reframed to show how ULIX can grow from regional operator into the travel technology and community platform the market is ready for.",
     badge: "October 2018 · Confidential Report",
@@ -882,7 +885,7 @@ export const siteContent = {
         year: "2001",
         content:
           "ULIX launched in 2001 around air travel, which the founder saw as broader, more dynamic, and easier to optimize than package holidays. Early lessons in packaged travel sharpened the focus on ticketing and reinforced a fast-learning operating culture.",
-        image: withBase("/images/zagreb_skyline.png"),
+        image: withBase("/images/balkan_network_map_v2.png"),
         tag: "Launch",
       },
       {
@@ -1119,7 +1122,7 @@ export const siteContent = {
     ],
     futureVision:
       "ULIX is exploring a co-innovation model with Amadeus and considering expansion into Bosnia and other Balkan markets, with the goal of building a regional network of travel innovation hubs.",
-    image: withBase("/images/innovation_hub.png"),
+    image: withBase("/images/travel_hub_community_v2.png"),
   },
 
   systemsOverview: {
@@ -1427,8 +1430,8 @@ export const siteContent = {
         sourcePages: [56, 154],
       },
     ],
-    image: withBase("/images/ecosystem_growth.png"),
-    corporateImage: withBase("/images/corporate_travel_interface.png"),
+    image: withBase("/images/transformation_roadmap_path.png"),
+    corporateImage: withBase("/images/corporate_booking_premium.png"),
   },
 
   processesOverview: {
