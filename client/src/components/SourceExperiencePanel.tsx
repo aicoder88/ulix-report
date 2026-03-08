@@ -27,7 +27,7 @@ export function SourceExperiencePanel({
               className="flex items-start gap-3 rounded-2xl border border-border/70 bg-secondary/20 p-4"
             >
               <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent" />
-              <p className="text-lg leading-relaxed text-foreground/85">
+              <p className="text-xl leading-relaxed text-foreground/85">
                 {item}
               </p>
             </div>
@@ -37,14 +37,14 @@ export function SourceExperiencePanel({
           <button
             type="button"
             onClick={() => onJumpToSection("urgency")}
-            className="rounded-full bg-primary px-5 py-2.5 text-lg font-semibold text-primary-foreground"
+            className="rounded-full bg-primary px-5 py-2.5 text-xl font-semibold text-primary-foreground"
           >
             Open the narrative
           </button>
           <button
             type="button"
             onClick={() => onJumpToSection("roadmap")}
-            className="rounded-full border border-primary/20 px-5 py-2.5 text-lg font-semibold text-primary hover:bg-primary/5"
+            className="rounded-full border border-primary/20 px-5 py-2.5 text-xl font-semibold text-primary hover:bg-primary/5"
           >
             Jump to roadmap
           </button>
@@ -63,7 +63,7 @@ export function SourceExperiencePanel({
               className="flex items-start gap-3 rounded-2xl border border-background/10 bg-background/5 p-4"
             >
               <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-primary" />
-              <p className="text-lg leading-relaxed text-background/80">
+              <p className="text-xl leading-relaxed text-background/80">
                 {item}
               </p>
             </div>
@@ -73,7 +73,7 @@ export function SourceExperiencePanel({
           <button
             type="button"
             onClick={() => onJumpToSection("proof")}
-            className="rounded-full bg-background px-5 py-2.5 text-lg font-semibold text-foreground"
+            className="rounded-full bg-background px-5 py-2.5 text-xl font-semibold text-foreground"
           >
             Open proof atlas
           </button>
@@ -82,12 +82,12 @@ export function SourceExperiencePanel({
             target="_blank"
             rel="noreferrer"
             onClick={() => onOpenPdf(undefined, "source-experience")}
-            className="rounded-full border border-background/20 px-5 py-2.5 text-lg font-semibold text-background hover:bg-background/5"
+            className="rounded-full border border-background/20 px-5 py-2.5 text-xl font-semibold text-background hover:bg-background/5"
           >
             Download original PDF
           </a>
         </div>
-        <p className="mt-6 text-lg leading-relaxed text-background/70">
+        <p className="mt-6 text-xl leading-relaxed text-background/70">
           {siteContent.proofLayer.closing}
         </p>
       </Card>
