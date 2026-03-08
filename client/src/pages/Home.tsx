@@ -94,7 +94,7 @@ function SectionHeader({
       </motion.p>
       <motion.h2
         variants={fadeInUp}
-        className={`mx-auto mb-4 max-w-4xl text-5xl font-extrabold md:text-6xl ${invert ? "text-background" : "text-foreground"
+        className={`mx-auto mb-4 max-w-4xl font-extrabold ${invert ? "text-background" : "text-foreground"
           }`}
       >
         {title}
@@ -102,7 +102,7 @@ function SectionHeader({
       {subtitle && (
         <motion.p
           variants={fadeInUp}
-          className={`mx-auto max-w-3xl text-xl leading-relaxed ${invert ? "text-background/72" : "text-muted-foreground"
+          className={`mx-auto max-w-3xl leading-relaxed ${invert ? "text-background/72" : "text-muted-foreground"
             }`}
         >
           {subtitle}
@@ -488,7 +488,7 @@ export default function Home() {
                   </motion.p>
                   <motion.h1
                     variants={fadeInUp}
-                    className="mb-6 max-w-4xl text-5xl font-extrabold leading-[0.97] tracking-tight md:text-7xl"
+                    className="mb-6 max-w-4xl font-extrabold leading-[0.97] tracking-tight"
                   >
                     <span className="text-foreground">
                       {siteContent.preface.title}
@@ -496,13 +496,13 @@ export default function Home() {
                   </motion.h1>
                   <motion.p
                     variants={fadeInUp}
-                    className="mb-5 max-w-3xl text-xl font-medium leading-relaxed text-muted-foreground md:text-2xl"
+                    className="mb-5 max-w-3xl font-medium leading-relaxed text-muted-foreground"
                   >
                     {siteContent.preface.subtitle}
                   </motion.p>
                   <motion.p
                     variants={fadeInUp}
-                    className="mb-4 max-w-3xl text-lg leading-8 text-foreground/80"
+                    className="mb-4 max-w-3xl text-foreground/80"
                   >
                     {siteContent.preface.description}
                   </motion.p>
