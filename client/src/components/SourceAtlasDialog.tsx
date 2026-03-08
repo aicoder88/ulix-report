@@ -48,10 +48,10 @@ export function SourceAtlasDialog({
             </div>
             <div className="max-h-[90vh] overflow-y-auto p-6 md:p-8">
               <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                <span className="inline-flex items-center rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary">
                   Source page {item.page}
                 </span>
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                <span className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                   {item.section}
                 </span>
               </div>
@@ -59,7 +59,7 @@ export function SourceAtlasDialog({
               <DialogTitle className="text-3xl font-extrabold text-foreground mb-3">
                 {item.title}
               </DialogTitle>
-              <DialogDescription className="text-base leading-relaxed text-muted-foreground mb-6">
+              <DialogDescription className="text-xl leading-relaxed text-muted-foreground mb-6">
                 {item.summary}
               </DialogDescription>
 
@@ -69,10 +69,10 @@ export function SourceAtlasDialog({
                   onClick={() => onJumpToSection(item.narrativeSectionId)}
                   className="rounded-2xl border border-border p-4 text-left hover:border-primary/30"
                 >
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary mb-2">
+                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary mb-2">
                     Back to web summary
                   </p>
-                  <p className="text-sm leading-relaxed text-foreground/80">
+                  <p className="text-lg leading-relaxed text-foreground/80">
                     Return to the narrative section that explains this source in
                     the web version.
                   </p>
@@ -84,17 +84,17 @@ export function SourceAtlasDialog({
                   onClick={() => onOpenPdf(item.page, "atlas-dialog")}
                   className="rounded-2xl border border-border p-4 text-left hover:border-primary/30"
                 >
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary mb-2">
+                  <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary mb-2">
                     Open original PDF
                   </p>
-                  <p className="text-sm leading-relaxed text-foreground/80">
+                  <p className="text-lg leading-relaxed text-foreground/80">
                     Jump directly into the original deck at page {item.page}.
                   </p>
                 </a>
               </div>
 
               <div className="rounded-2xl bg-primary/5 p-5 mb-6">
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary mb-2">
+                <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary mb-2">
                   Why this page matters
                 </p>
                 <p className="text-foreground/85 leading-relaxed">
@@ -103,7 +103,7 @@ export function SourceAtlasDialog({
               </div>
 
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary mb-3">
+                <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary mb-3">
                   What to notice
                 </p>
                 <ul className="space-y-3">
@@ -126,7 +126,7 @@ export function SourceAtlasDialog({
                   <button
                     type="button"
                     onClick={() => onOpenPage(previousItem.page)}
-                    className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground hover:border-primary/30 hover:text-primary"
+                    className="rounded-full border border-border px-4 py-2 text-lg font-semibold text-foreground hover:border-primary/30 hover:text-primary"
                   >
                     Previous source page
                   </button>
@@ -135,7 +135,7 @@ export function SourceAtlasDialog({
                   <button
                     type="button"
                     onClick={() => onOpenPage(nextItem.page)}
-                    className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground hover:border-primary/30 hover:text-primary"
+                    className="rounded-full border border-border px-4 py-2 text-lg font-semibold text-foreground hover:border-primary/30 hover:text-primary"
                   >
                     Next source page
                   </button>
@@ -143,7 +143,7 @@ export function SourceAtlasDialog({
                 <button
                   type="button"
                   onClick={() => onJumpToSection("proof")}
-                  className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+                  className="rounded-full bg-primary px-4 py-2 text-lg font-semibold text-primary-foreground"
                 >
                   View full proof atlas
                 </button>

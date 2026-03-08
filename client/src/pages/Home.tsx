@@ -129,7 +129,7 @@ function SectionCue({
         }`}
     >
       <p
-        className={`text-sm leading-relaxed ${invert ? "text-background/68" : "text-muted-foreground"
+        className={`text-lg leading-relaxed ${invert ? "text-background/68" : "text-muted-foreground"
           }`}
       >
         {label}
@@ -137,7 +137,7 @@ function SectionCue({
       <button
         type="button"
         onClick={onClick}
-        className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold ${invert
+        className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-lg font-semibold ${invert
           ? "bg-background text-foreground"
           : "border border-primary/20 text-primary hover:bg-primary/5"
           }`}
@@ -352,7 +352,7 @@ export default function Home() {
                 animate={{ opacity: 1, x: 0 }}
                 className="min-w-0"
               >
-                <p className="truncate text-base font-extrabold text-foreground">
+                <p className="truncate text-xl font-extrabold text-foreground">
                   ULIX / TMC
                 </p>
                 <p className="truncate text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
@@ -363,7 +363,7 @@ export default function Home() {
                 <button
                   type="button"
                   onClick={() => setQuickJumpOpen(true)}
-                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-semibold text-foreground hover:border-primary/30 hover:text-primary"
+                  className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-sm font-semibold text-foreground hover:border-primary/30 hover:text-primary"
                   aria-label="Open quick jump"
                 >
                   <Search className="h-3.5 w-3.5" />
@@ -382,7 +382,7 @@ export default function Home() {
                     aria-current={
                       activeNav === item.id ? "location" : undefined
                     }
-                    className={`rounded-full px-3 py-1.5 text-xs font-semibold whitespace-nowrap ${activeNav === item.id
+                    className={`rounded-full px-3 py-1.5 text-sm font-semibold whitespace-nowrap ${activeNav === item.id
                       ? "bg-primary/15 text-primary"
                       : "text-muted-foreground hover:bg-primary/5 hover:text-primary"
                       }`}
@@ -417,7 +417,7 @@ export default function Home() {
                         setMobileMenuOpen(false);
                         setQuickJumpOpen(true);
                       }}
-                      className="col-span-2 inline-flex items-center justify-center gap-2 rounded-lg border border-border px-3 py-2 text-sm font-semibold text-foreground hover:border-primary/30 hover:text-primary"
+                      className="col-span-2 inline-flex items-center justify-center gap-2 rounded-lg border border-border px-3 py-2 text-lg font-semibold text-foreground hover:border-primary/30 hover:text-primary"
                     >
                       <Search className="h-4 w-4" />
                       Quick jump
@@ -429,7 +429,7 @@ export default function Home() {
                         aria-current={
                           activeNav === item.id ? "location" : undefined
                         }
-                        className={`rounded-lg px-3 py-2 text-left text-sm font-medium ${activeNav === item.id
+                        className={`rounded-lg px-3 py-2 text-left text-lg font-medium ${activeNav === item.id
                           ? "bg-primary/10 text-primary"
                           : "text-muted-foreground hover:bg-muted"
                           }`}
@@ -476,7 +476,7 @@ export default function Home() {
                 <div className="max-w-4xl">
                   <motion.div
                     variants={fadeInUp}
-                    className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-4 py-2 text-sm font-bold text-primary shadow-sm"
+                    className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/20 bg-background/80 px-4 py-2 text-lg font-bold text-primary shadow-sm"
                   >
                     {siteContent.preface.badge}
                   </motion.div>
@@ -555,7 +555,7 @@ export default function Home() {
                         <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10 text-primary">
                           <CheckCircle className="h-5 w-5" />
                         </div>
-                        <p className="text-sm leading-6 text-foreground/80">
+                        <p className="text-lg leading-6 text-foreground/80">
                           {item}
                         </p>
                       </motion.div>
@@ -567,16 +567,16 @@ export default function Home() {
                     className="mt-8 grid gap-4 sm:grid-cols-[1fr_auto]"
                   >
                     <div className="rounded-[1.75rem] border border-primary/15 bg-gradient-to-br from-primary/8 via-background to-accent/8 p-5">
-                      <p className="mb-2 text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                      <p className="mb-2 text-sm font-bold uppercase tracking-[0.16em] text-primary">
                         Source anchor
                       </p>
-                      <p className="text-sm leading-7 text-foreground/78">
+                      <p className="text-lg leading-7 text-foreground/78">
                         {siteContent.meta.title} began as a workshop deck in{" "}
                         {siteContent.meta.date}. This edition reframes that source
                         as a current AI transformation narrative while keeping the
                         original proof public.
                       </p>
-                      <p className="mt-4 text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                      <p className="mt-4 text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                         {siteContent.meta.preparedBy}
                       </p>
                     </div>
@@ -626,7 +626,7 @@ export default function Home() {
                   </p>
                   <div className="mb-4 rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
                     <p className="brief-kicker mb-2 text-primary">Next move</p>
-                    <p className="text-sm leading-7 text-foreground/82">
+                    <p className="text-lg leading-7 text-foreground/82">
                       {siteContent.preface.nextStep}
                     </p>
                   </div>
@@ -691,7 +691,7 @@ export default function Home() {
                             key={fact}
                             className="rounded-2xl border border-border/70 bg-background/72 p-5"
                           >
-                            <p className="text-sm leading-8 text-foreground/82">
+                            <p className="text-lg leading-8 text-foreground/82">
                               {fact}
                             </p>
                           </div>
@@ -712,7 +712,7 @@ export default function Home() {
                       <p className="brief-kicker mb-2 text-primary">
                         AI implication
                       </p>
-                      <p className="text-sm leading-7 text-background/82">
+                      <p className="text-lg leading-7 text-background/82">
                         {
                           siteContent.transformationNarrative.business
                             .aiImplication
@@ -723,7 +723,7 @@ export default function Home() {
                       <p className="brief-kicker mb-2 text-primary">
                         Next action
                       </p>
-                      <p className="text-sm leading-7 text-foreground/80">
+                      <p className="text-lg leading-7 text-foreground/80">
                         {
                           siteContent.transformationNarrative.business
                             .nextAction
@@ -751,7 +751,7 @@ export default function Home() {
                           <p className="brief-kicker mb-3 text-primary">
                             {card.title}
                           </p>
-                          <p className="text-base leading-7 text-foreground/82">
+                          <p className="text-xl leading-7 text-foreground/82">
                             {card.description}
                           </p>
                         </motion.div>
@@ -790,7 +790,7 @@ export default function Home() {
                             <p className="brief-kicker mb-2 text-primary">
                               {item.year}
                             </p>
-                            <p className="text-base font-bold leading-7 text-foreground">
+                            <p className="text-xl font-bold leading-7 text-foreground">
                               {item.heading}
                             </p>
                           </div>
@@ -807,7 +807,7 @@ export default function Home() {
                             <p className="mb-2 text-lg font-bold text-foreground">
                               {pillar.title}
                             </p>
-                            <p className="text-sm leading-7 text-foreground/78">
+                            <p className="text-lg leading-7 text-foreground/78">
                               {pillar.description}
                             </p>
                           </div>
@@ -851,12 +851,12 @@ export default function Home() {
                   <h3 className="mb-4 text-3xl font-extrabold text-background">
                     Build quality into the company, not just into the copy.
                   </h3>
-                  <p className="text-base leading-8 text-background/78">
+                  <p className="text-xl leading-8 text-background/78">
                     {siteContent.operatingCommitments.intro}
                   </p>
                   <div className="mt-6 rounded-[1.5rem] bg-primary/12 px-5 py-5">
                     <p className="brief-kicker mb-2 text-primary">Next move</p>
-                    <p className="text-sm leading-7 text-background/82">
+                    <p className="text-lg leading-7 text-background/82">
                       {siteContent.operatingCommitments.nextStep}
                     </p>
                   </div>
@@ -877,14 +877,14 @@ export default function Home() {
                           className="rounded-[1.75rem] border border-background/10 bg-background/6 p-5"
                         >
                           <div className="mb-3 flex items-center gap-3">
-                            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/16 text-sm font-extrabold text-primary">
+                            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/16 text-lg font-extrabold text-primary">
                               {item.number}
                             </span>
                             <p className="text-lg font-bold text-background">
                               {item.title}
                             </p>
                           </div>
-                          <p className="text-sm leading-7 text-background/78">
+                          <p className="text-lg leading-7 text-background/78">
                             {item.description}
                           </p>
                         </motion.div>
@@ -907,14 +907,14 @@ export default function Home() {
                         className="rounded-[1.75rem] border border-background/10 bg-background/6 p-5"
                       >
                         <div className="mb-3 flex items-center gap-3">
-                          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/16 text-sm font-extrabold text-primary">
+                          <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/16 text-lg font-extrabold text-primary">
                             {item.number}
                           </span>
                           <p className="text-lg font-bold text-background">
                             {item.title}
                           </p>
                         </div>
-                        <p className="text-sm leading-7 text-background/78">
+                        <p className="text-lg leading-7 text-background/78">
                           {item.description}
                         </p>
                       </motion.div>
@@ -979,7 +979,7 @@ export default function Home() {
                         item => (
                           <span
                             key={item}
-                            className="rounded-full bg-background/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-background/82"
+                            className="rounded-full bg-background/10 px-3 py-1.5 text-sm font-bold uppercase tracking-[0.14em] text-background/82"
                           >
                             {item}
                           </span>
@@ -989,7 +989,7 @@ export default function Home() {
                   </div>
                   <div className="mt-6 rounded-[1.75rem] border border-primary/15 bg-primary/6 px-5 py-5">
                     <p className="brief-kicker mb-2 text-primary">Next move</p>
-                    <p className="text-sm leading-7 text-foreground/82">
+                    <p className="text-lg leading-7 text-foreground/82">
                       {siteContent.transformationNarrative.platform.nextStep}
                     </p>
                   </div>
@@ -1015,11 +1015,11 @@ export default function Home() {
                               <p className="text-xl font-bold text-foreground">
                                 {asset.title}
                               </p>
-                              <p className="mt-2 text-sm leading-7 text-foreground/78">
+                              <p className="mt-2 text-lg leading-7 text-foreground/78">
                                 {asset.description}
                               </p>
                             </div>
-                            <span className="rounded-full bg-primary/10 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-primary">
+                            <span className="rounded-full bg-primary/10 px-3 py-1.5 text-sm font-bold uppercase tracking-[0.14em] text-primary">
                               {asset.proof}
                             </span>
                           </div>
@@ -1040,7 +1040,7 @@ export default function Home() {
                         <p className="brief-kicker mb-2 text-primary">
                           Fast proof
                         </p>
-                        <p className="text-base leading-7 text-foreground/78">
+                        <p className="text-xl leading-7 text-foreground/78">
                           Open the pages that show the platform is already real.
                         </p>
                       </div>
@@ -1049,7 +1049,7 @@ export default function Home() {
                         target="_blank"
                         rel="noreferrer"
                         onClick={() => handlePdfOpen(undefined, "platform")}
-                        className="rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5"
+                        className="rounded-full border border-primary/20 px-4 py-2 text-lg font-semibold text-primary hover:bg-primary/5"
                       >
                         Original PDF
                       </a>
@@ -1060,7 +1060,7 @@ export default function Home() {
                           key={item.page}
                           type="button"
                           onClick={() => openAtlasPage(item.page)}
-                          className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/15"
+                          className="rounded-full bg-primary/10 px-4 py-2 text-lg font-semibold text-primary hover:bg-primary/15"
                         >
                           Page {item.page} · {item.title}
                         </button>
@@ -1118,13 +1118,13 @@ export default function Home() {
                         <p className="mb-2 text-xl font-bold text-background">
                           {issue.title}
                         </p>
-                        <p className="mb-4 text-sm leading-7 text-background/76">
+                        <p className="mb-4 text-lg leading-7 text-background/76">
                           {issue.description}
                         </p>
-                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                        <p className="text-sm font-bold uppercase tracking-[0.16em] text-primary">
                           Impact
                         </p>
-                        <p className="mt-2 text-sm leading-7 text-background/84">
+                        <p className="mt-2 text-lg leading-7 text-background/84">
                           {issue.impact}
                         </p>
                       </motion.div>
@@ -1157,7 +1157,7 @@ export default function Home() {
                           key={item}
                           className="rounded-[1.25rem] border border-background/10 bg-background/4 p-4"
                         >
-                          <p className="text-sm leading-7 text-background/80">
+                          <p className="text-lg leading-7 text-background/80">
                             {item}
                           </p>
                         </div>
@@ -1168,7 +1168,7 @@ export default function Home() {
                     <p className="brief-kicker mb-2 text-primary">
                       Operator note
                     </p>
-                    <p className="text-sm leading-7 text-background/82">
+                    <p className="text-lg leading-7 text-background/82">
                       {siteContent.transformationNarrative.friction.nextAction}
                     </p>
                   </div>
@@ -1198,7 +1198,7 @@ export default function Home() {
                   phase => (
                     <span
                       key={phase.label}
-                      className="rounded-full border border-primary/15 bg-background/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-foreground/70"
+                      className="rounded-full border border-primary/15 bg-background/80 px-4 py-2 text-sm font-bold uppercase tracking-[0.16em] text-foreground/70"
                     >
                       {phase.label}
                     </span>
@@ -1221,7 +1221,7 @@ export default function Home() {
                     <p className="brief-kicker mb-2 text-primary">
                       Platform lens
                     </p>
-                    <p className="text-sm leading-7 text-background/82">
+                    <p className="text-lg leading-7 text-background/82">
                       {
                         siteContent.transformationNarrative.roadmap
                           .partnerContext
@@ -1230,7 +1230,7 @@ export default function Home() {
                   </div>
                   <div className="mt-6 rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
                     <p className="brief-kicker mb-2 text-primary">Next move</p>
-                    <p className="text-sm leading-7 text-foreground/82">
+                    <p className="text-lg leading-7 text-foreground/82">
                       {siteContent.transformationNarrative.roadmap.nextStep}
                     </p>
                   </div>
@@ -1244,7 +1244,7 @@ export default function Home() {
                           key={page}
                           type="button"
                           onClick={() => openAtlasPage(page)}
-                          className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/15"
+                          className="rounded-full bg-primary/10 px-4 py-2 text-lg font-semibold text-primary hover:bg-primary/15"
                         >
                           Page {page}
                         </button>
@@ -1288,11 +1288,11 @@ export default function Home() {
                               {phase.label}
                             </h3>
                           </div>
-                          <span className="rounded-full bg-primary/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-primary">
+                          <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.16em] text-primary">
                             {phase.horizon}
                           </span>
                         </div>
-                        <p className="mb-5 text-base leading-8 text-foreground/80">
+                        <p className="mb-5 text-xl leading-8 text-foreground/80">
                           {phase.summary}
                         </p>
                         <div className="grid gap-3">
@@ -1301,7 +1301,7 @@ export default function Home() {
                               key={item}
                               className="rounded-[1.5rem] border border-border/70 bg-background/74 p-4"
                             >
-                              <p className="text-sm leading-7 text-foreground/82">
+                              <p className="text-lg leading-7 text-foreground/82">
                                 {item}
                               </p>
                             </div>
@@ -1337,7 +1337,7 @@ export default function Home() {
                 </p>
                 <div className="mx-auto mt-6 max-w-4xl rounded-[1.5rem] border border-primary/15 bg-background/80 px-5 py-5">
                   <p className="brief-kicker mb-2 text-primary">Next move</p>
-                  <p className="text-sm leading-7 text-foreground/82">
+                  <p className="text-lg leading-7 text-foreground/82">
                     {siteContent.proofLayer.nextStep}
                   </p>
                 </div>
@@ -1371,24 +1371,24 @@ export default function Home() {
                       </div>
                       <div className="p-6">
                         <div className="mb-4 flex flex-wrap items-center gap-3">
-                          <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                          <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-bold text-primary">
                             Proof page {item.page}
                           </span>
-                          <span className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                          <span className="text-sm font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                             {item.section}
                           </span>
                         </div>
                         <h3 className="mb-3 text-2xl font-extrabold text-foreground">
                           {item.title}
                         </h3>
-                        <p className="mb-4 text-sm leading-7 text-foreground/78">
+                        <p className="mb-4 text-lg leading-7 text-foreground/78">
                           {item.summary}
                         </p>
                         <div className="mb-5 rounded-[1.25rem] bg-foreground px-4 py-4 text-background">
                           <p className="brief-kicker mb-2 text-primary">
                             Why it matters
                           </p>
-                          <p className="text-sm leading-7 text-background/82">
+                          <p className="text-lg leading-7 text-background/82">
                             {item.whyItMatters}
                           </p>
                         </div>
@@ -1398,7 +1398,7 @@ export default function Home() {
                               key={bullet}
                               className="rounded-[1.25rem] border border-border/70 bg-background/74 p-4"
                             >
-                              <p className="text-sm leading-7 text-foreground/80">
+                              <p className="text-lg leading-7 text-foreground/80">
                                 {bullet}
                               </p>
                             </div>
@@ -1408,7 +1408,7 @@ export default function Home() {
                           <button
                             type="button"
                             onClick={() => openAtlasPage(item.page)}
-                            className="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground"
+                            className="rounded-full bg-primary px-4 py-2 text-lg font-semibold text-primary-foreground"
                           >
                             Open proof page
                           </button>
@@ -1417,7 +1417,7 @@ export default function Home() {
                             onClick={() =>
                               scrollToSection(item.narrativeSectionId)
                             }
-                            className="rounded-full border border-primary/20 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/5"
+                            className="rounded-full border border-primary/20 px-4 py-2 text-lg font-semibold text-primary hover:bg-primary/5"
                           >
                             Back to narrative
                           </button>
@@ -1428,7 +1428,7 @@ export default function Home() {
                             onClick={() =>
                               handlePdfOpen(item.page, "proof-card")
                             }
-                            className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground hover:border-primary/30 hover:text-primary"
+                            className="rounded-full border border-border px-4 py-2 text-lg font-semibold text-foreground hover:border-primary/30 hover:text-primary"
                           >
                             Open PDF page
                           </a>

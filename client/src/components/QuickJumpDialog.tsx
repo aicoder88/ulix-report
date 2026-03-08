@@ -64,7 +64,7 @@ export function QuickJumpDialog({
                     <p className="font-semibold text-foreground">
                       {entry.title}
                     </p>
-                    <p className="mt-1 line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+                    <p className="mt-1 line-clamp-2 text-sm leading-relaxed text-muted-foreground">
                       {entry.description}
                     </p>
                   </div>

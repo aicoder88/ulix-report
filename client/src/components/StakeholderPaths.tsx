@@ -44,7 +44,7 @@ export function StakeholderPaths({
                 }`}
               >
                 <p
-                  className={`text-xs font-bold uppercase tracking-[0.18em] ${
+                  className={`text-sm font-bold uppercase tracking-[0.18em] ${
                     isActive ? "text-primary" : "text-primary"
                   } mb-3`}
                 >
@@ -52,7 +52,7 @@ export function StakeholderPaths({
                 </p>
                 <h3 className="text-2xl font-bold mb-3">{view.label}</h3>
                 <p
-                  className={`text-sm leading-relaxed ${
+                  className={`text-lg leading-relaxed ${
                     isActive ? "text-background/75" : "text-muted-foreground"
                   }`}
                 >
@@ -93,7 +93,7 @@ function StakeholderDetail({
     <Card className="border-none p-7 md:p-8 shadow-sm bg-background">
       <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
         <div className="max-w-2xl">
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary mb-3">
             Recommended entry path
           </p>
           <h3 className="text-3xl font-bold text-foreground mb-3">
@@ -110,7 +110,7 @@ function StakeholderDetail({
           onClick={() =>
             onOpenPdf(view.sourcePages[0], `stakeholder-${view.id}`)
           }
-          className="inline-flex items-center justify-center rounded-full border border-primary/20 px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary/5"
+          className="inline-flex items-center justify-center rounded-full border border-primary/20 px-5 py-2.5 text-lg font-semibold text-primary hover:bg-primary/5"
         >
           Open original PDF
         </a>
@@ -118,7 +118,7 @@ function StakeholderDetail({
 
       <div className="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary mb-3">
             Start with these sections
           </p>
           <div className="flex flex-wrap gap-3">
@@ -127,7 +127,7 @@ function StakeholderDetail({
                 key={sectionId}
                 type="button"
                 onClick={() => onJumpToSection(sectionId)}
-                className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-foreground hover:border-primary/30 hover:text-primary"
+                className="rounded-full border border-border px-4 py-2 text-lg font-semibold text-foreground hover:border-primary/30 hover:text-primary"
               >
                 {sectionLabelMap.get(sectionId) ?? sectionId}
               </button>
@@ -136,7 +136,7 @@ function StakeholderDetail({
         </div>
 
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary mb-3">
             Validate in source pages
           </p>
           <div className="flex flex-wrap gap-3">
@@ -145,7 +145,7 @@ function StakeholderDetail({
                 key={page}
                 type="button"
                 onClick={() => onOpenSourcePage(page)}
-                className="rounded-full bg-primary/10 px-4 py-2 text-sm font-semibold text-primary hover:bg-primary/15"
+                className="rounded-full bg-primary/10 px-4 py-2 text-lg font-semibold text-primary hover:bg-primary/15"
               >
                 Page {page}
               </button>
@@ -155,7 +155,7 @@ function StakeholderDetail({
       </div>
 
       <div className="mt-8">
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary mb-3">
           Reader prompts
         </p>
         <div className="grid gap-3">
@@ -164,7 +164,7 @@ function StakeholderDetail({
               key={prompt}
               className="rounded-2xl border border-border/70 bg-secondary/20 p-4"
             >
-              <p className="text-sm leading-relaxed text-foreground/85">
+              <p className="text-lg leading-relaxed text-foreground/85">
                 {prompt}
               </p>
             </div>

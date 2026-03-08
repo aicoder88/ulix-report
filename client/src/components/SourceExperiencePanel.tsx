@@ -14,7 +14,7 @@ export function SourceExperiencePanel({
   return (
     <div className="grid gap-6 xl:grid-cols-[1.05fr_0.95fr] items-start">
       <Card className="border-none p-5 shadow-sm bg-background">
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary mb-3">
           Narrative path
         </p>
         <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -27,7 +27,7 @@ export function SourceExperiencePanel({
               className="flex items-start gap-3 rounded-2xl border border-border/70 bg-secondary/20 p-4"
             >
               <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-accent" />
-              <p className="text-sm leading-relaxed text-foreground/85">
+              <p className="text-lg leading-relaxed text-foreground/85">
                 {item}
               </p>
             </div>
@@ -37,14 +37,14 @@ export function SourceExperiencePanel({
           <button
             type="button"
             onClick={() => onJumpToSection("urgency")}
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground"
+            className="rounded-full bg-primary px-5 py-2.5 text-lg font-semibold text-primary-foreground"
           >
             Open the narrative
           </button>
           <button
             type="button"
             onClick={() => onJumpToSection("roadmap")}
-            className="rounded-full border border-primary/20 px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary/5"
+            className="rounded-full border border-primary/20 px-5 py-2.5 text-lg font-semibold text-primary hover:bg-primary/5"
           >
             Jump to roadmap
           </button>
@@ -52,7 +52,7 @@ export function SourceExperiencePanel({
       </Card>
 
       <Card className="border-none p-5 shadow-sm bg-foreground text-background">
-        <p className="text-xs font-bold uppercase tracking-[0.18em] text-primary mb-3">
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-primary mb-3">
           Proof path
         </p>
         <h3 className="text-2xl font-bold mb-4">Verify in the original deck</h3>
@@ -63,7 +63,7 @@ export function SourceExperiencePanel({
               className="flex items-start gap-3 rounded-2xl border border-background/10 bg-background/5 p-4"
             >
               <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-primary" />
-              <p className="text-sm leading-relaxed text-background/80">
+              <p className="text-lg leading-relaxed text-background/80">
                 {item}
               </p>
             </div>
@@ -73,7 +73,7 @@ export function SourceExperiencePanel({
           <button
             type="button"
             onClick={() => onJumpToSection("proof")}
-            className="rounded-full bg-background px-5 py-2.5 text-sm font-semibold text-foreground"
+            className="rounded-full bg-background px-5 py-2.5 text-lg font-semibold text-foreground"
           >
             Open proof atlas
           </button>
@@ -82,12 +82,12 @@ export function SourceExperiencePanel({
             target="_blank"
             rel="noreferrer"
             onClick={() => onOpenPdf(undefined, "source-experience")}
-            className="rounded-full border border-background/20 px-5 py-2.5 text-sm font-semibold text-background hover:bg-background/5"
+            className="rounded-full border border-background/20 px-5 py-2.5 text-lg font-semibold text-background hover:bg-background/5"
           >
             Download original PDF
           </a>
         </div>
-        <p className="mt-6 text-sm leading-relaxed text-background/70">
+        <p className="mt-6 text-lg leading-relaxed text-background/70">
           {siteContent.proofLayer.closing}
         </p>
       </Card>
