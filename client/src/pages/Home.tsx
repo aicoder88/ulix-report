@@ -573,6 +573,12 @@ export default function Home() {
                   <p className="mb-6 text-lg leading-8 text-foreground/80">
                     {siteContent.preface.pullQuote}
                   </p>
+                  <div className="mb-6 rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
+                    <p className="brief-kicker mb-2 text-primary">Next move</p>
+                    <p className="text-sm leading-7 text-foreground/82">
+                      {siteContent.preface.nextStep}
+                    </p>
+                  </div>
                   <div className="mb-6 grid gap-3 sm:grid-cols-[1.15fr_0.85fr]">
                     <div className="overflow-hidden rounded-[1.75rem] border border-border/70 bg-secondary/30">
                       <LazyImage
@@ -770,7 +776,10 @@ export default function Home() {
                           AI implication
                         </p>
                         <p className="text-sm leading-7 text-background/82">
-                          {siteContent.transformationNarrative.business.aiImplication}
+                          {
+                            siteContent.transformationNarrative.business
+                              .aiImplication
+                          }
                         </p>
                       </div>
                       <div className="rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
@@ -778,7 +787,10 @@ export default function Home() {
                           Next action
                         </p>
                         <p className="text-sm leading-7 text-foreground/80">
-                          {siteContent.transformationNarrative.business.nextAction}
+                          {
+                            siteContent.transformationNarrative.business
+                              .nextAction
+                          }
                         </p>
                       </div>
                     </div>
@@ -822,6 +834,12 @@ export default function Home() {
                   <p className="text-base leading-8 text-background/78">
                     {siteContent.operatingCommitments.intro}
                   </p>
+                  <div className="mt-6 rounded-[1.5rem] bg-primary/12 px-5 py-5">
+                    <p className="brief-kicker mb-2 text-primary">Next move</p>
+                    <p className="text-sm leading-7 text-background/82">
+                      {siteContent.operatingCommitments.nextStep}
+                    </p>
+                  </div>
                   <SectionCue
                     label="Each commitment is meant to shape product decisions, leadership habits, training, and AI deployment choices."
                     targetLabel="See the platform"
@@ -922,6 +940,12 @@ export default function Home() {
                         )
                       )}
                     </div>
+                  </div>
+                  <div className="mt-6 rounded-[1.75rem] border border-primary/15 bg-primary/6 px-5 py-5">
+                    <p className="brief-kicker mb-2 text-primary">Next move</p>
+                    <p className="text-sm leading-7 text-foreground/82">
+                      {siteContent.transformationNarrative.platform.nextStep}
+                    </p>
                   </div>
                 </motion.div>
 
@@ -1117,14 +1141,16 @@ export default function Home() {
                 subtitle={siteContent.transformationNarrative.roadmap.subtitle}
               />
               <div className="mb-10 flex flex-wrap justify-center gap-3">
-                {siteContent.transformationNarrative.roadmap.phases.map(phase => (
-                  <span
-                    key={phase.label}
-                    className="rounded-full border border-primary/15 bg-background/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-foreground/70"
-                  >
-                    {phase.label}
-                  </span>
-                ))}
+                {siteContent.transformationNarrative.roadmap.phases.map(
+                  phase => (
+                    <span
+                      key={phase.label}
+                      className="rounded-full border border-primary/15 bg-background/80 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-foreground/70"
+                    >
+                      {phase.label}
+                    </span>
+                  )
+                )}
               </div>
               <div className="grid gap-8 xl:grid-cols-[0.78fr_1.22fr]">
                 <motion.div
@@ -1143,11 +1169,22 @@ export default function Home() {
                       Platform lens
                     </p>
                     <p className="text-sm leading-7 text-background/82">
-                      {siteContent.transformationNarrative.roadmap.partnerContext}
+                      {
+                        siteContent.transformationNarrative.roadmap
+                          .partnerContext
+                      }
+                    </p>
+                  </div>
+                  <div className="mt-6 rounded-[1.5rem] border border-primary/15 bg-primary/6 px-5 py-5">
+                    <p className="brief-kicker mb-2 text-primary">Next move</p>
+                    <p className="text-sm leading-7 text-foreground/82">
+                      {siteContent.transformationNarrative.roadmap.nextStep}
                     </p>
                   </div>
                   <div className="mt-6">
-                    <p className="brief-kicker mb-3 text-primary">Proof pages</p>
+                    <p className="brief-kicker mb-3 text-primary">
+                      Proof pages
+                    </p>
                     <div className="flex flex-wrap gap-3">
                       {roadmapProofPages.map(page => (
                         <button
@@ -1245,6 +1282,12 @@ export default function Home() {
                 <p className="mx-auto max-w-4xl text-center text-lg leading-8 text-foreground/80">
                   {siteContent.proofLayer.narrative}
                 </p>
+                <div className="mx-auto mt-6 max-w-4xl rounded-[1.5rem] border border-primary/15 bg-background/80 px-5 py-5">
+                  <p className="brief-kicker mb-2 text-primary">Next move</p>
+                  <p className="text-sm leading-7 text-foreground/82">
+                    {siteContent.proofLayer.nextStep}
+                  </p>
+                </div>
               </motion.div>
 
               <SourceExperiencePanel
